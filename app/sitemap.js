@@ -1,6 +1,6 @@
 // Sitemap for Google to discover all pages
 export default function sitemap() {
-    const baseUrl = "https://bibekbhowmick.com"; // Update with your domain
+    const baseUrl = "https://bibek-bhowmick.vercel.app"; // Update with your domain
     
     return [
         { url: baseUrl, lastModified: new Date(), priority: 1.0 },

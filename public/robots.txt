@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://bibekbhowmick.com/sitemap.xml
+Sitemap: https://bibek-bhowmick.vercel.app/sitemap.xml

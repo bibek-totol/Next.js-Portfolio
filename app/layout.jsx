@@ -38,6 +38,10 @@ export const metadata = {
         },
     },
 
+      verification: {
+        google: "JvcxkI25NE5nFc76e1NMlbZBjqXP1b51686Gi8BHFAc",
+    },
+
     // Open Graph (for Facebook, LinkedIn sharing)
     openGraph: {
         type: "website",
