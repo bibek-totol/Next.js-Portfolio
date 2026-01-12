@@ -69,31 +69,31 @@ export default function Experience() {
     ];
 
     return (
-        <section className="mt-14 py-16 px-6 sm:px-10 md:px-20">
+        <section className="mt-14 py-16 px-6 sm:px-10 md:px-20" aria-label="Bibek Bhowmick Experience and Education" id="experience-section">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
 
-                <div>
+                <article aria-label="Professional Experience">
                     <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-purple-400 mb-6 flex items-center gap-3">
-                        <AiTwotoneIdcard className="text-4xl" /> My Experience
+                        <AiTwotoneIdcard className="text-4xl" aria-hidden="true" /> Bibek Bhowmick's Experience
                     </h2>
                     <div className="space-y-6">
                         {experienceData.map((item, i) => (
                             <Card key={i} {...item} />
                         ))}
                     </div>
-                </div>
+                </article>
 
 
-                <div>
+                <article aria-label="Educational Background">
                     <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-purple-400 mb-6 flex items-center gap-3">
-                        <AiOutlineRead className="text-4xl" /> My Education
+                        <AiOutlineRead className="text-4xl" aria-hidden="true" /> Bibek Bhowmick's Education
                     </h2>
                     <div className="space-y-6">
                         {educationData.map((item, i) => (
                             <Card key={i} {...item} />
                         ))}
                     </div>
-                </div>
+                </article>
             </div>
         </section>
     );

@@ -54,10 +54,14 @@ export default function Skills() {
 
     return (
         <div className='p-10 mt-10 bg-transparent'>
-            <section className="text-center mt-20 px-5">
+            <section className="text-center mt-20 px-5" aria-label="Bibek Bhowmick Technical Skills" id="skills-section">
                 <h2 className="text-4xl lg:text-6xl font-bold text-white">
-                    Technical <span className="text-purple-400">Skills</span>
+                    Bibek Bhowmick's <span className="text-purple-400">Technical Skills</span>
                 </h2>
+                <p className="text-[#B694FA]/80 max-w-2xl mx-auto mt-4 text-sm sm:text-base">
+                    Full Stack Web Developer proficient in modern technologies including React.js, Next.js, Node.js, Express.js, MongoDB, PostgreSQL, and cloud architecture.
+                    Continuously learning and applying industry best practices.
+                </p>
 
                 <VerticalTimeline lineColor="#9463F8">
                     {timelineData.map((item, index) => (

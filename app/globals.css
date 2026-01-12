@@ -234,3 +234,16 @@ border: 1px solid rgba(128, 5, 107, 0.81);
     hsl(240 50% 6%) 100%
   );
 }
+
+/* Screen Reader Only - SEO Content */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}

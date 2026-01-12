@@ -24,10 +24,11 @@ const ProjectCard = ({ img, link, desc, to }) => (
         >
             <Image
                 src={img}
-                alt="Project Preview"
+                alt={`${desc.split(' ').slice(0, 3).join(' ')} - Web Development Project by Bibek Bhowmick`}
                 className="w-full h-60 object-cover rounded-xl"
                 width={500}
                 height={240}
+                loading="lazy"
             />
 
             <div className="mt-4 space-y-3 flex flex-col justify-between flex-1">
@@ -107,16 +108,16 @@ export default function RecentWorks() {
     ];
 
     return (
-        <section className="mt-16 rounded-4xl py-20 px-6 sm:px-10 lg:px-24">
-            <div className="max-w-7xl mx-auto text-center">
+        <section className="mt-16 rounded-4xl py-20 px-6 sm:px-10 lg:px-24" aria-label="Web Development Projects by Bibek Bhowmick" id="portfolio-section">
+            <header className="max-w-7xl mx-auto text-center">
                 <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#B694FA]">
-                    My Recent <span className="text-[#9463F8]">Works</span>
+                    Bibek Bhowmick's Recent <span className="text-[#9463F8]">Web Development Projects</span>
                 </h2>
                 <p className="text-[#B694FA] font-medium max-w-2xl mx-auto mt-4 text-sm sm:text-base">
-                    We put your ideas and thus your wishes in the form of a unique web
-                    project that inspires you and your customers.
+                    Browse my portfolio of Full Stack web development projects built with React, Next.js, Node.js, and MongoDB.
+                    Each project showcases professional-grade code and modern UI/UX design.
                 </p>
-            </div>
+            </header>
 
             <Tabs selectedTabClassName="bg-[#9463F8]/10 !text-white/50 shadow-lg shadow-[#9463F8]/50">
                 <TabList className="flex flex-wrap justify-center gap-4 text-sm sm:text-base lg:text-lg mt-12 mb-6 bg-black/30 rounded-full p-3 font-semibold text-white">

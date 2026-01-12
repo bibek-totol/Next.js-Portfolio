@@ -1,60 +1,127 @@
 "use client";
 
 import React from 'react';
+import { FaLinkedinIn, FaGithub, FaTwitter, FaEnvelope, FaCode } from "react-icons/fa";
+import { SiLeetcode,  SiCodeforces, SiCodechef } from "react-icons/si";
+import Link from 'next/link';
 
 export default function Footer() {
     return (
-        <div className='relative font-bold'>
+        <footer className='relative font-bold bg-gradient-to-t from-[#0a0d1f] to-transparent' itemScope itemType="https://schema.org/WPFooter">
 
+            {/* SEO-Rich Content Section */}
+            <div className="max-w-6xl mx-auto px-6 py-10">
 
+               
 
+                {/* Authoritative Backlinks Section */}
+                <section className="mb-8" aria-label="Professional Links">
+                    <h3 className="text-xl font-bold text-[#8953F7] text-center mb-6">Connect & Verify My Skills</h3>
 
-            <footer className="footer footer-center   text-[#FFFFFF] rounded p-10 flex flex-col ">
-
-
-                <nav className='z-50'>
-                    <div className="grid grid-flow-col gap-4">
-                        <a>
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                className="fill-current">
-                                <path
-                                    d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
-                            </svg>
+                    <nav className="flex flex-wrap justify-center gap-4 z-50" aria-label="External profile links">
+                        {/* LinkedIn - High Authority Backlink */}
+                        <a
+                            href="https://www.linkedin.com/in/bibekbhowmick/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            title="Bibek Bhowmick LinkedIn - Professional Full Stack Developer Profile"
+                            className="flex items-center gap-2 px-4 py-2 bg-[#0077B5]/20 hover:bg-[#0077B5]/40 rounded-full text-[#D7C4FC] transition-all hover:scale-105"
+                        >
+                            <FaLinkedinIn className="text-[#0077B5]" />
+                            <span className="text-sm">LinkedIn</span>
                         </a>
-                        <a>
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                className="fill-current">
-                                <path
-                                    d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
-                            </svg>
+
+                        {/* GitHub - Developer Authority Backlink */}
+                        <a
+                            href="https://github.com/bibek-totol"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            title="Bibek Bhowmick GitHub - Web Development Projects & Code Repositories"
+                            className="flex items-center gap-2 px-4 py-2 bg-gray-700/20 hover:bg-gray-700/40 rounded-full text-[#D7C4FC] transition-all hover:scale-105"
+                        >
+                            <FaGithub />
+                            <span className="text-sm">GitHub</span>
                         </a>
-                        <a>
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                className="fill-current">
-                                <path
-                                    d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
-                            </svg>
+
+                        {/* LeetCode - Problem Solving Authority */}
+                        <a
+                            href="https://leetcode.com/u/bibektotol/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            title="Bibek Bhowmick LeetCode Profile - Problem Solving & DSA Skills"
+                            className="flex items-center gap-2 px-4 py-2 bg-[#FFA116]/20 hover:bg-[#FFA116]/40 rounded-full text-[#D7C4FC] transition-all hover:scale-105"
+                        >
+                            <SiLeetcode className="text-[#FFA116]" />
+                            <span className="text-sm">LeetCode</span>
                         </a>
-                    </div>
-                </nav>
-                <aside className='z-50'>
-                    <p>Copyright © {new Date().getFullYear()} - All right reserved by ACME Industries Ltd</p>
-                </aside>
-            </footer>
+
+                        {/* HackerRank - Coding Skills Authority */}
+                        <a
+                            href="https://codeforces.com/profile/bibektotol"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            title="Bibek Bhowmick Codeforces - Problem Solving & DSA Skills"
+                            className="flex items-center gap-2 px-4 py-2 bg-blue-800 rounded-full text-[#D7C4FC] transition-all hover:scale-105"
+                        >
+                            <SiCodeforces className="text-red-500" />
+                            <span className="text-sm">Codeforces</span>
+                        </a>
 
 
-        </div>
+
+                         <a
+                            href="https://www.codechef.com/users/bibektotol"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            title="Bibek Bhowmick Codechef - Problem Solving & DSA Skills"
+                            className="flex items-center gap-2 px-4 py-2 bg-[#FFA116]/20 hover:bg-[#FFA116]/40 rounded-full text-[#D7C4FC] transition-all hover:scale-105"
+                        >
+                            <SiCodechef className="text-[#FFA116]" />
+                            <span className="text-sm">Codechef</span>
+                        </a>
+
+                        {/* Certifications Repository - Trust Builder */}
+                        <a
+                            href="https://github.com/bibek-totol/ALL-SKILLS-CERTIFICATION"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            title="Bibek Bhowmick Certifications - All Professional Developer Certificates"
+                            className="flex items-center gap-2 px-4 py-2 bg-[#9463F8]/20 hover:bg-[#9463F8]/40 rounded-full text-[#D7C4FC] transition-all hover:scale-105"
+                        >
+                            <FaCode className="text-[#9463F8]" />
+                            <span className="text-sm">Certifications</span>
+                        </a>
+                    </nav>
+                </section>
+
+                {/* Quick Links - Internal SEO */}
+                <section className="mb-8" aria-label="Quick navigation">
+                    <h3 className="text-lg font-bold text-[#8953F7] text-center mb-4">Quick Links</h3>
+                    <nav className="flex flex-wrap justify-center gap-4 text-sm" aria-label="Site navigation">
+                        <Link href="#services" className="text-[#D7C4FC]/70 hover:text-cyan-400 transition">Web Development Services</Link>
+                        <Link href="#works" className="text-[#D7C4FC]/70 hover:text-cyan-400 transition">Recent Projects</Link>
+                        <Link href="#education" className="text-[#D7C4FC]/70 hover:text-cyan-400 transition">Experience & Education</Link>
+                        <Link href="#skills" className="text-[#D7C4FC]/70 hover:text-cyan-400 transition">Technical Skills</Link>
+                        <Link href="#contact" className="text-[#D7C4FC]/70 hover:text-cyan-400 transition">Contact Bibek</Link>
+                    </nav>
+                </section>
+
+               
+
+            </div>
+
+            {/* Copyright with Author Microdata */}
+            <div className="border-t border-[#8953F7]/20 py-6">
+                <div className="text-center z-50">
+                    <p className="text-[#D7C4FC]/70 text-sm">
+                        © {new Date().getFullYear()} <span itemProp="author">Bibek Bhowmick</span>. Full Stack Web Developer Portfolio. All rights reserved.
+                    </p>
+                    <p className="text-[#D7C4FC]/50 text-xs mt-2">
+                        Built with Next.js, React, and Tailwind CSS | Deployed on Vercel
+                    </p>
+                </div>
+            </div>
+
+        </footer>
     )
 }

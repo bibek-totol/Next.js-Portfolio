@@ -38,7 +38,7 @@ export const metadata = {
         },
     },
 
-      verification: {
+    verification: {
         google: "JvcxkI25NE5nFc76e1NMlbZBjqXP1b51686Gi8BHFAc",
     },
 
@@ -70,14 +70,74 @@ export const metadata = {
 const personSchema = {
     "@context": "https://schema.org",
     "@type": "Person",
+    "@id": "https://bibek-bhowmick.vercel.app/#person",
     name: "Bibek Bhowmick",
+    givenName: "Bibek",
+    familyName: "Bhowmick",
     jobTitle: "Full Stack Web Developer",
-    description: "Full Stack Web Developer specializing in React, Next.js, Node.js with 2+ years experience",
+    description: "Bibek Bhowmick is a professional Full Stack Web Developer from Bangladesh with 2+ years of experience specializing in React, Next.js, Node.js, and modern web technologies.",
+    url: "https://bibek-bhowmick.vercel.app",
+    image: "https://bibek-bhowmick.vercel.app/assets/Screenshot_4-Photoroom.webp",
+    // Authoritative Backlinks - Builds Google Trust
     sameAs: [
         "https://www.linkedin.com/in/bibekbhowmick/",
         "https://github.com/bibek-totol",
+        "https://leetcode.com/u/bibek_totol/",
+        "https://www.hackerrank.com/profile/bibek1810053",
+        "https://github.com/bibek-totol/ALL-SKILLS-CERTIFICATION"
     ],
-    knowsAbout: ["Web Development", "React", "Next.js", "Node.js", "Full Stack Development"],
+    knowsAbout: [
+        "Web Development",
+        "Full Stack Development",
+        "React.js",
+        "Next.js",
+        "Node.js",
+        "MongoDB",
+        "JavaScript",
+        "TypeScript",
+        "Express.js",
+        "Tailwind CSS",
+        "REST API",
+        "MERN Stack"
+    ],
+    alumniOf: {
+        "@type": "CollegeOrUniversity",
+        "name": "Bangladesh Army University of Engineering and Technology",
+        "sameAs": "https://bauet.ac.bd/"
+    },
+    nationality: {
+        "@type": "Country",
+        "name": "Bangladesh"
+    }
+};
+
+// WebSite Schema for Sitelinks and Search
+const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://bibek-bhowmick.vercel.app/#website",
+    url: "https://bibek-bhowmick.vercel.app",
+    name: "Bibek Bhowmick Portfolio",
+    description: "Professional Full Stack Web Developer Portfolio showcasing React, Next.js, and Node.js projects",
+    author: {
+        "@id": "https://bibek-bhowmick.vercel.app/#person"
+    },
+    publisher: {
+        "@id": "https://bibek-bhowmick.vercel.app/#person"
+    }
+};
+
+// Professional Service Schema
+const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    name: "Bibek Bhowmick Web Development Services",
+    description: "Full Stack Web Development services including React, Next.js, Node.js, and MongoDB solutions",
+    provider: {
+        "@id": "https://bibek-bhowmick.vercel.app/#person"
+    },
+    areaServed: "Worldwide",
+    serviceType: ["Web Development", "Full Stack Development", "Frontend Development", "Backend Development"]
 };
 
 export default function RootLayout({ children }) {
@@ -88,10 +148,23 @@ export default function RootLayout({ children }) {
                     rel="stylesheet"
                     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
                 />
-                {/* Structured Data for Google */}
+                {/* Canonical URL for SEO */}
+                <link rel="canonical" href="https://bibek-bhowmick.vercel.app" />
+
+                {/* Structured Data for Google - Person Schema */}
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+                />
+                {/* Structured Data - WebSite Schema */}
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+                />
+                {/* Structured Data - Professional Service Schema */}
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
                 />
             </head>
             <body className="antialiased">{children}</body>
