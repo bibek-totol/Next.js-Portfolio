@@ -11,17 +11,65 @@ export const metadata = {
     description:
         "Bibek Bhowmick - Professional Full Stack Web Developer specializing in React, Next.js, Node.js. Portfolio showcasing 20+ web development projects. Hire a skilled website developer.",
 
-    // Target Keywords
-    keywords: [
-        "Bibek Bhowmick",
-        "Bibek Bhowmick Portfolio",
-        "Web Developer",
-        "Website Developer",
-        "Full Stack Developer",
-        "React Developer",
-        "Portfolio",
-        "Bibek",
-    ],
+ 
+   keywords: [
+  "Bibek Bhowmick",
+  "Bibek Bhowmick Portfolio",
+  "Bibek Portfolio",
+  "Bibek Bhowmick Web Developer",
+  "Bibek Bhowmick Website Developer",
+  "Bibek Bhowmick Frontend Developer",
+  "Bibek Bhowmick Full Stack Developer",
+   "Bibek Bhowmick Software Engineer",
+
+  "Web Developer",
+  "Frontend Developer",
+  "Backend Developer",
+  "Full Stack Developer",
+  "JavaScript Developer",
+  "MERN Stack Developer",
+
+  
+  "React Developer",
+  "Next.js Developer",
+  "Next.js Portfolio",
+  "React Portfolio",
+  "React.js Developer",
+  "Next.js App Router Developer",
+
+  "JavaScript Developer",
+  "TypeScript Developer",
+  "Node.js Developer",
+  "MongoDB Developer",
+  "REST API Developer",
+
+
+  
+  "Responsive Web Developer",
+  "Modern Web Developer",
+  "UI Developer",
+
+
+  "Junior Frontend Developer",
+  "Junior Full Stack Developer",
+  "Web Developer Portfolio",
+  "Frontend Developer Portfolio",
+  "Software Developer Portfolio",
+
+
+  "Web Developer from Bangladesh",
+  "Frontend Developer Bangladesh",
+  "Backend Developer Bangladesh",
+  "Full Stack Developer Bangladesh",
+  "Website Developer Bangladesh",
+  "Remote Web Developer",
+  "Remote Frontend Developer",
+
+
+  "Bibek",
+  "Bibek Developer",
+],
+
 
     // Author information
     authors: [{ name: "Bibek Bhowmick" }],
