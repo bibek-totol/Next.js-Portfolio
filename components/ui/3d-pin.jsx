@@ -26,7 +26,9 @@ export const PinContainer = ({
             className={cn("relative group/pin z-50  cursor-pointer", containerClassName)}
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
-            href={href || "/"}>
+            href={href || "/"}
+            target={"_blank"}
+            rel="noopener noreferrer">
             <div
                 style={{
                     perspective: "1000px",

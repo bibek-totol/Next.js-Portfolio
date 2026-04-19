@@ -65,6 +65,13 @@ export default function RecentWorks() {
     const mernProjects = [
         {
             id: 1,
+            img: "/assets/Screenshot_15.jpg",
+            link: "https://ictd-lab-gsi-project-frontend.vercel.app/",
+            desc: "ICTD Lab Bangladesh: A full-stack government digital lab management system built to track and manage digital labs across Bangladesh.",
+            to: "/details7",
+        },
+        {
+            id: 2,
             img: "/assets/Screenshot_58.webp",
             link: "https://bibek-iems-portal.netlify.app/",
             desc: "IEMS: Collaborative Study Platform connects students, tutors, and administrators to streamline scheduling, resource sharing, and management.",
@@ -72,15 +79,15 @@ export default function RecentWorks() {
         },
 
         {
-            id: 2,
+            id: 3,
             img: "/assets/Screenshot_4.jpg",
-            link: "#",
+            link: "https://ride-booking-nexus-frontend.vercel.app/",
             desc: "Ride Booking Nexus is a full-stack application that allows users to book rides and manage their bookings(Rider, Driver and Admin) Roles",
             to: "/details6",
         },
 
         {
-            id: 3,
+            id: 4,
             img: "/assets/Screenshot_75.webp",
             link: "https://tech-tales2025.netlify.app/",
             desc: "Tech-Tales is a feature-rich blogging app with comments, calendar, and wishlist integration to enhance writing experiences.",
@@ -97,13 +104,7 @@ export default function RecentWorks() {
             desc: "AI Job Assistant is a smart career platform offering AI resume checking, job matching, interview scheduling, and more.",
             to: "/details5",
         },
-        {
-            id: 2,
-            img: "/assets/Screenshot_2.webp",
-            link: "https://schedule-processing-next-js.vercel.app/",
-            desc: "Schedule Processing is a web application used for managing and scheduling events and tasks with secure role-based access and notifications.",
-            to: "/details4",
-        },
+       
 
     ];
 

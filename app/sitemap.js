@@ -10,5 +10,6 @@ export default function sitemap() {
         { url: `${baseUrl}/details4`, lastModified: new Date(), priority: 0.8 },
         { url: `${baseUrl}/details5`, lastModified: new Date(), priority: 0.8 },
         { url: `${baseUrl}/details6`, lastModified: new Date(), priority: 0.8 },
+        { url: `${baseUrl}/details7`, lastModified: new Date(), priority: 0.8 },
     ];
 }
