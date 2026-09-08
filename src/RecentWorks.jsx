@@ -2,7 +2,6 @@ import React from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import im1 from "./assets/Screenshot_58.webp";
-import im2 from "./assets/Screenshot_14.webp";
 import im3 from "./assets/Screenshot_75.webp";
 import im4 from "./assets/Screenshot_2.webp";
 import im5 from "./assets/Screenshot_2.jpg";
@@ -72,49 +71,37 @@ export default function RecentWorks() {
       desc: "IEMS: Collaborative Study Platform connects students, tutors, and administrators to streamline scheduling, resource sharing, and management.",
       to: "/details1",
     },
-
     {
       id: 2,
-      img: im6,
-      link: "#",
-      desc: "Ride Booking Nexus is a full-stack application that allows users to book rides and manage their bookings(Rider, Driver and Admin) Roles",
-      to: "/details6",
-    },
-
-    {
-      id: 3,
       img: im3,
       link: "https://tech-tales2025.netlify.app/",
       desc: "Tech-Tales is a feature-rich blogging app with comments, calendar, and wishlist integration to enhance writing experiences.",
       to: "/details3",
     },
-    // {
-    //   id: 4,
-    //   img: im3,
-    //   link: "https://unruly-destruction.surge.sh/",
-    //   desc: "GameCritics-Hub2 is a game review platform with user ratings, recommendations, and real-time news & updates for gamers.",
-    //   to: "/details2",
-    // }
-
   ];
 
   const nextProjects = [
-
     {
       id: 1,
-      img: im5,
-      link: "https://ai-job-assistant-five.vercel.app/",
-      desc: "AI Job Assistant is a smart career platform offering AI resume checking, job matching, interview scheduling, and more.",
-      to: "/details5",
+      img: im6,
+      link: "https://road-mate-microservice.vercel.app/",
+      desc: "RoadMate: Real-time ride-sharing & fleet dispatch platform built with Next.js 16 (App Router), React 19, Socket.IO microservice, Leaflet geospatial tracking, ZegoCloud Video KYC, and Stripe cashless payments.",
+      to: "/details6",
     },
     {
       id: 2,
+      img: im5,
+      link: "https://ai-job-assistant-five.vercel.app/",
+      desc: "JobAI: AI-powered career platform built with Next.js 16, TypeScript, LangChain & LangGraph agents, PDF vector embeddings, JSearch jobs, and real-time Vapi voice mock interviews.",
+      to: "/details5",
+    },
+    {
+      id: 3,
       img: im4,
       link: "https://schedule-processing-next-js.vercel.app/",
       desc: "Schedule Processing is a web application used for managing and scheduling events and tasks with secure role-based access and notifications.",
       to: "/details4",
     },
-
   ];
 
   return (
@@ -132,7 +119,7 @@ export default function RecentWorks() {
       <Tabs selectedTabClassName="bg-[#9463F8]/10 !text-white/50 shadow-lg shadow-[#9463F8]/50">
         <TabList className="flex flex-wrap justify-center gap-4 text-sm sm:text-base lg:text-lg mt-12 mb-6 bg-black/30 rounded-full p-3 font-semibold text-white">
           <Tab className="px-4 py-2 rounded-full cursor-pointer hover:bg-[#9463F8]/20 focus:outline-none focus:bg-[#9463F8]/30">
-            MERN Stack Projects
+            React.js Projects
           </Tab>
           <Tab className="px-4 py-2 rounded-full cursor-pointer hover:bg-[#9463F8]/20 focus:outline-none focus:bg-[#9463F8]/30">
             Next.js Projects

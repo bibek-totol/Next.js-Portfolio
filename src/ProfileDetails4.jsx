@@ -17,6 +17,7 @@ import { Pagination, Autoplay, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import { Lock, Bot, Bell, Calendar, ShieldCheck, Users } from "lucide-react";
 
 const ProfileDetails4 = () => {
   return (
@@ -110,40 +111,67 @@ const ProfileDetails4 = () => {
                   ))}
                 </Swiper>
               </Suspense>
-              <h3 className="text-lg  mt-2">Key Features</h3>
-              <ul className="mt-2 space-y-2">
-
-
-
-
-
-                <li className="pookie3 p-3 rounded-lg">🔹  User Authentication & Security: Google Sign-In, Password Reset, Account Lockout on multiple attempts and JWT token basd authentication </li>
-                <li className="pookie3 p-3 rounded-lg">🔹 AI Integration: An AI Assistant is integrated to support employees by answering frequently asked questions and
-                  guiding them through the application functionalities. This improves user engagement and reduces
-                  dependency on support staff.</li>
-                <li className="pookie3 p-3 rounded-lg">🔹 Notifications System: Real-time updates are sent from the admin panel to employees regarding new tasks,
-                  upcoming events, and any changes to assignments.</li>
-                <li className="pookie3 p-3 rounded-lg">🔹 Calendar and Scheduling System: Google Calendar-style Event System  Built with FullCalendar, this allows admins to: <br /> <br />
-                  o Create, update, and delete events.  <br />
-                  o Assign tasks based on scheduled events.  <br />
-                  o Track employee participation and progress.</li>
-                <li className="pookie3 p-3 rounded-lg">🔹 Role-Based Access(Admin Panel): <br /> <br />
-                  o Task creation, editing, and deletion functionalities. <br />
-                  o View and manage all employee data.<br />
-                  o Event scheduling and task assignment via FullCalendar. <br />
-                  o Notification system to inform employees of updates. <br />
-                  o Visual analytics using charts for better decision-making.<br />
+              <h3 className="text-lg mt-2">Key Features</h3>
+              <ul className="mt-2 space-y-2.5">
+                <li className="pookie3 p-3 sm:p-3.5 rounded-xl flex items-start gap-3 text-sm font-normal">
+                  <span className="w-7 h-7 rounded-lg bg-cyan-500/20 border border-cyan-400/40 flex items-center justify-center flex-shrink-0 text-cyan-300 mt-0.5 shadow-sm shadow-cyan-500/20">
+                    <Lock className="w-4 h-4" />
+                  </span>
+                  <span className="flex-1 leading-relaxed">
+                    <strong className="text-white font-bold mr-1">User Authentication & Security:</strong>
+                    Google Sign-In, Password Reset, Account Lockout on multiple attempts, and JWT token based authentication.
+                  </span>
                 </li>
 
-
-
-                <li className="pookie3 p-3 rounded-lg">🔹 Role-Based Access(Employee Panel): <br /> <br />
-                  o View assigned tasks and deadlines. <br />
-                  o Receive real-time notifications from admin.<br />
-                  o Access a personalized schedule and event calendar. <br />
-                  o Communicate through integrated features. <br />
+                <li className="pookie3 p-3 sm:p-3.5 rounded-xl flex items-start gap-3 text-sm font-normal">
+                  <span className="w-7 h-7 rounded-lg bg-purple-500/20 border border-purple-400/40 flex items-center justify-center flex-shrink-0 text-purple-300 mt-0.5 shadow-sm shadow-purple-500/20">
+                    <Bot className="w-4 h-4" />
+                  </span>
+                  <span className="flex-1 leading-relaxed">
+                    <strong className="text-white font-bold mr-1">AI Integration:</strong>
+                    An AI Assistant is integrated to support employees by answering frequently asked questions and guiding them through application functionalities to improve engagement and efficiency.
+                  </span>
                 </li>
 
+                <li className="pookie3 p-3 sm:p-3.5 rounded-xl flex items-start gap-3 text-sm font-normal">
+                  <span className="w-7 h-7 rounded-lg bg-emerald-500/20 border border-emerald-400/40 flex items-center justify-center flex-shrink-0 text-emerald-300 mt-0.5 shadow-sm shadow-emerald-500/20">
+                    <Bell className="w-4 h-4" />
+                  </span>
+                  <span className="flex-1 leading-relaxed">
+                    <strong className="text-white font-bold mr-1">Notifications System:</strong>
+                    Real-time updates sent from the admin panel to employees regarding new tasks, upcoming events, and any changes to assignments.
+                  </span>
+                </li>
+
+                <li className="pookie3 p-3 sm:p-3.5 rounded-xl flex items-start gap-3 text-sm font-normal">
+                  <span className="w-7 h-7 rounded-lg bg-pink-500/20 border border-pink-400/40 flex items-center justify-center flex-shrink-0 text-pink-300 mt-0.5 shadow-sm shadow-pink-500/20">
+                    <Calendar className="w-4 h-4" />
+                  </span>
+                  <span className="flex-1 leading-relaxed">
+                    <strong className="text-white font-bold mr-1">Calendar and Scheduling System:</strong>
+                    Google Calendar-style Event System built with FullCalendar, allowing admins to create, update, and delete events, assign tasks based on scheduled events, and track employee progress.
+                  </span>
+                </li>
+
+                <li className="pookie3 p-3 sm:p-3.5 rounded-xl flex items-start gap-3 text-sm font-normal">
+                  <span className="w-7 h-7 rounded-lg bg-blue-500/20 border border-blue-400/40 flex items-center justify-center flex-shrink-0 text-blue-300 mt-0.5 shadow-sm shadow-blue-500/20">
+                    <ShieldCheck className="w-4 h-4" />
+                  </span>
+                  <span className="flex-1 leading-relaxed">
+                    <strong className="text-white font-bold mr-1">Role-Based Access (Admin Panel):</strong>
+                    Task creation, editing, and deletion functionalities, full employee data management, event scheduling, notification broadcasts, and visual analytics using charts.
+                  </span>
+                </li>
+
+                <li className="pookie3 p-3 sm:p-3.5 rounded-xl flex items-start gap-3 text-sm font-normal">
+                  <span className="w-7 h-7 rounded-lg bg-amber-500/20 border border-amber-400/40 flex items-center justify-center flex-shrink-0 text-amber-300 mt-0.5 shadow-sm shadow-amber-500/20">
+                    <Users className="w-4 h-4" />
+                  </span>
+                  <span className="flex-1 leading-relaxed">
+                    <strong className="text-white font-bold mr-1">Role-Based Access (Employee Panel):</strong>
+                    View assigned tasks and deadlines, receive real-time notifications from admin, access a personalized schedule and event calendar, and communicate through integrated features.
+                  </span>
+                </li>
               </ul>
             </div>
           </div>

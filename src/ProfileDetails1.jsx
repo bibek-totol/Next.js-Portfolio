@@ -14,6 +14,7 @@ import { Pagination, Autoplay, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import { ShieldCheck, Lock, GraduationCap, BookOpen, LayoutDashboard, Star, Bell, Search } from "lucide-react";
 
 
 const ProfileDetails1 = () => {
@@ -112,22 +113,79 @@ const ProfileDetails1 = () => {
                 </Swiper>
               </Suspense>
 
-              <h3 className="text-lg  mt-4">Key Features</h3>
-              <ul className="mt-2 space-y-2">
+              <h3 className="text-lg mt-4">Key Features</h3>
+              <ul className="mt-2 space-y-2.5">
+                <li className="pookie3 p-3 sm:p-3.5 rounded-xl flex items-center gap-3 text-sm font-normal">
+                  <span className="w-7 h-7 rounded-lg bg-cyan-500/20 border border-cyan-400/40 flex items-center justify-center flex-shrink-0 text-cyan-300 shadow-sm shadow-cyan-500/20">
+                    <ShieldCheck className="w-4 h-4" />
+                  </span>
+                  <span className="flex-1 font-semibold text-gray-100">
+                    User Authentication & Social Login
+                  </span>
+                </li>
 
+                <li className="pookie3 p-3 sm:p-3.5 rounded-xl flex items-center gap-3 text-sm font-normal">
+                  <span className="w-7 h-7 rounded-lg bg-purple-500/20 border border-purple-400/40 flex items-center justify-center flex-shrink-0 text-purple-300 shadow-sm shadow-purple-500/20">
+                    <Lock className="w-4 h-4" />
+                  </span>
+                  <span className="flex-1 font-semibold text-gray-100">
+                    Role-Based Access Control (RBAC)
+                  </span>
+                </li>
 
+                <li className="pookie3 p-3 sm:p-3.5 rounded-xl flex items-center gap-3 text-sm font-normal">
+                  <span className="w-7 h-7 rounded-lg bg-emerald-500/20 border border-emerald-400/40 flex items-center justify-center flex-shrink-0 text-emerald-300 shadow-sm shadow-emerald-500/20">
+                    <GraduationCap className="w-4 h-4" />
+                  </span>
+                  <span className="flex-1 font-semibold text-gray-100">
+                    Student Dashboard
+                  </span>
+                </li>
 
+                <li className="pookie3 p-3 sm:p-3.5 rounded-xl flex items-center gap-3 text-sm font-normal">
+                  <span className="w-7 h-7 rounded-lg bg-pink-500/20 border border-pink-400/40 flex items-center justify-center flex-shrink-0 text-pink-300 shadow-sm shadow-pink-500/20">
+                    <BookOpen className="w-4 h-4" />
+                  </span>
+                  <span className="flex-1 font-semibold text-gray-100">
+                    Tutor Dashboard
+                  </span>
+                </li>
 
+                <li className="pookie3 p-3 sm:p-3.5 rounded-xl flex items-center gap-3 text-sm font-normal">
+                  <span className="w-7 h-7 rounded-lg bg-blue-500/20 border border-blue-400/40 flex items-center justify-center flex-shrink-0 text-blue-300 shadow-sm shadow-blue-500/20">
+                    <LayoutDashboard className="w-4 h-4" />
+                  </span>
+                  <span className="flex-1 font-semibold text-gray-100">
+                    Admin Dashboard
+                  </span>
+                </li>
 
-                <li className="pookie3 p-3 rounded-lg">🔹  User Authentication & Social Login</li>
-                <li className="pookie3 p-3 rounded-lg">🔹 Role-Based Access Control (RBAC)</li>
-                <li className="pookie3 p-3 rounded-lg">🔹 Student Dashboard</li>
-                <li className="pookie3 p-3 rounded-lg">🔹 Tutor Dashboard</li>
-                <li className="pookie3 p-3 rounded-lg">🔹 Admin Dashboard</li>
-                <li className="pookie3 p-3 rounded-lg">🔹 Review and Rating System</li>
-                <li className="pookie3 p-3 rounded-lg">🔹 Announcements Feature</li>
-                <li className="pookie3 p-3 rounded-lg">🔹 Pagination and Search</li>
+                <li className="pookie3 p-3 sm:p-3.5 rounded-xl flex items-center gap-3 text-sm font-normal">
+                  <span className="w-7 h-7 rounded-lg bg-amber-500/20 border border-amber-400/40 flex items-center justify-center flex-shrink-0 text-amber-300 shadow-sm shadow-amber-500/20">
+                    <Star className="w-4 h-4" />
+                  </span>
+                  <span className="flex-1 font-semibold text-gray-100">
+                    Review and Rating System
+                  </span>
+                </li>
 
+                <li className="pookie3 p-3 sm:p-3.5 rounded-xl flex items-center gap-3 text-sm font-normal">
+                  <span className="w-7 h-7 rounded-lg bg-teal-500/20 border border-teal-400/40 flex items-center justify-center flex-shrink-0 text-teal-300 shadow-sm shadow-teal-500/20">
+                    <Bell className="w-4 h-4" />
+                  </span>
+                  <span className="flex-1 font-semibold text-gray-100">
+                    Announcements Feature
+                  </span>
+                </li>
+
+                <li className="pookie3 p-3 sm:p-3.5 rounded-xl flex items-center gap-3 text-sm font-normal">
+                  <span className="w-7 h-7 rounded-lg bg-indigo-500/20 border border-indigo-400/40 flex items-center justify-center flex-shrink-0 text-indigo-300 shadow-sm shadow-indigo-500/20">
+                    <Search className="w-4 h-4" />
+                  </span>
+                  <span className="flex-1 font-semibold text-gray-100">
+                    Pagination and Search
+                  </span>
+                </li>
               </ul>
             </div>
           </div>

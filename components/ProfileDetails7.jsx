@@ -10,6 +10,7 @@ import { Pagination, Autoplay, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import { ShieldCheck, Layers, MapPin, UploadCloud, BarChart3, Languages, Server } from "lucide-react";
 
 const ProfileDetails7 = () => {
     const images = [
@@ -112,34 +113,75 @@ const ProfileDetails7 = () => {
                             </Suspense>
 
                             <h3 className="text-lg mt-8 mb-4">What I Built 👇</h3>
-                            <ul className="space-y-3">
-                                <li className="pookie3 p-3 rounded-lg">
-                                    <span className="text-blue-400 mr-2">✅</span> 
-                                    <strong>Authentication System:</strong> JWT-based login, email OTP verification, bcrypt password hashing, and secure cookie handling.
+                            <ul className="space-y-2.5">
+                                <li className="pookie3 p-3 sm:p-3.5 rounded-xl flex items-start gap-3 text-sm font-normal">
+                                    <span className="w-7 h-7 rounded-lg bg-cyan-500/20 border border-cyan-400/40 flex items-center justify-center flex-shrink-0 text-cyan-300 mt-0.5 shadow-sm shadow-cyan-500/20">
+                                        <ShieldCheck className="w-4 h-4" />
+                                    </span>
+                                    <span className="flex-1 leading-relaxed">
+                                        <strong className="text-white font-bold mr-1">Authentication System:</strong>
+                                        JWT-based login, email OTP verification, bcrypt password hashing, and secure cookie handling.
+                                    </span>
                                 </li>
-                                <li className="pookie3 p-3 rounded-lg">
-                                    <span className="text-blue-400 mr-2">✅</span> 
-                                    <strong>Core Lab Management:</strong> Search, filter, and paginate labs. Update info, file complaints, send reports, and export data as Excel, CSV, or Print.
+
+                                <li className="pookie3 p-3 sm:p-3.5 rounded-xl flex items-start gap-3 text-sm font-normal">
+                                    <span className="w-7 h-7 rounded-lg bg-purple-500/20 border border-purple-400/40 flex items-center justify-center flex-shrink-0 text-purple-300 mt-0.5 shadow-sm shadow-purple-500/20">
+                                        <Layers className="w-4 h-4" />
+                                    </span>
+                                    <span className="flex-1 leading-relaxed">
+                                        <strong className="text-white font-bold mr-1">Core Lab Management:</strong>
+                                        Search, filter, and paginate labs. Update info, file complaints, send reports, and export data as Excel, CSV, or Print.
+                                    </span>
                                 </li>
-                                <li className="pookie3 p-3 rounded-lg">
-                                    <span className="text-blue-400 mr-2">✅</span> 
-                                    <strong>Interactive Map:</strong> Integrated Leaflet + React-Leaflet to geographically plot all lab locations across Bangladesh's divisions and upazilas.
+
+                                <li className="pookie3 p-3 sm:p-3.5 rounded-xl flex items-start gap-3 text-sm font-normal">
+                                    <span className="w-7 h-7 rounded-lg bg-emerald-500/20 border border-emerald-400/40 flex items-center justify-center flex-shrink-0 text-emerald-300 mt-0.5 shadow-sm shadow-emerald-500/20">
+                                        <MapPin className="w-4 h-4" />
+                                    </span>
+                                    <span className="flex-1 leading-relaxed">
+                                        <strong className="text-white font-bold mr-1">Interactive Map:</strong>
+                                        Integrated Leaflet + React-Leaflet to geographically plot all lab locations across Bangladesh&apos;s divisions and upazilas.
+                                    </span>
                                 </li>
-                                <li className="pookie3 p-3 rounded-lg">
-                                    <span className="text-blue-400 mr-2">✅</span> 
-                                    <strong>File Handling & Cloudinary:</strong> Built-in PDF viewer and Cloudinary integration for uploads. Custom backend maintenance scripts for cleanup.
+
+                                <li className="pookie3 p-3 sm:p-3.5 rounded-xl flex items-start gap-3 text-sm font-normal">
+                                    <span className="w-7 h-7 rounded-lg bg-pink-500/20 border border-pink-400/40 flex items-center justify-center flex-shrink-0 text-pink-300 mt-0.5 shadow-sm shadow-pink-500/20">
+                                        <UploadCloud className="w-4 h-4" />
+                                    </span>
+                                    <span className="flex-1 leading-relaxed">
+                                        <strong className="text-white font-bold mr-1">File Handling & Cloudinary:</strong>
+                                        Built-in PDF viewer and Cloudinary integration for uploads. Custom backend maintenance scripts for cleanup.
+                                    </span>
                                 </li>
-                                <li className="pookie3 p-3 rounded-lg">
-                                    <span className="text-blue-400 mr-2">✅</span> 
-                                    <strong>Dashboard & Analytics:</strong> Data visualization with Recharts and a scrolling announcement ticker for real-time notices.
+
+                                <li className="pookie3 p-3 sm:p-3.5 rounded-xl flex items-start gap-3 text-sm font-normal">
+                                    <span className="w-7 h-7 rounded-lg bg-blue-500/20 border border-blue-400/40 flex items-center justify-center flex-shrink-0 text-blue-300 mt-0.5 shadow-sm shadow-blue-500/20">
+                                        <BarChart3 className="w-4 h-4" />
+                                    </span>
+                                    <span className="flex-1 leading-relaxed">
+                                        <strong className="text-white font-bold mr-1">Dashboard & Analytics:</strong>
+                                        Data visualization with Recharts and a scrolling announcement ticker for real-time notices.
+                                    </span>
                                 </li>
-                                <li className="pookie3 p-3 rounded-lg">
-                                    <span className="text-blue-400 mr-2">✅</span> 
-                                    <strong>Bilingual Support (Bangla + English):</strong> Full translation system using i18next with a custom LanguageContext.
+
+                                <li className="pookie3 p-3 sm:p-3.5 rounded-xl flex items-start gap-3 text-sm font-normal">
+                                    <span className="w-7 h-7 rounded-lg bg-teal-500/20 border border-teal-400/40 flex items-center justify-center flex-shrink-0 text-teal-300 mt-0.5 shadow-sm shadow-teal-500/20">
+                                        <Languages className="w-4 h-4" />
+                                    </span>
+                                    <span className="flex-1 leading-relaxed">
+                                        <strong className="text-white font-bold mr-1">Bilingual Support (Bangla + English):</strong>
+                                        Full translation system using i18next with a custom LanguageContext.
+                                    </span>
                                 </li>
-                                <li className="pookie3 p-3 rounded-lg">
-                                    <span className="text-blue-400 mr-2">✅</span> 
-                                    <strong>Backend & Infrastructure:</strong> Versioned REST API with Express + TypeScript + Prisma ORM + PostgreSQL, Winston logging, and Vercel deployment.
+
+                                <li className="pookie3 p-3 sm:p-3.5 rounded-xl flex items-start gap-3 text-sm font-normal">
+                                    <span className="w-7 h-7 rounded-lg bg-amber-500/20 border border-amber-400/40 flex items-center justify-center flex-shrink-0 text-amber-300 mt-0.5 shadow-sm shadow-amber-500/20">
+                                        <Server className="w-4 h-4" />
+                                    </span>
+                                    <span className="flex-1 leading-relaxed">
+                                        <strong className="text-white font-bold mr-1">Backend & Infrastructure:</strong>
+                                        Versioned REST API with Express + TypeScript + Prisma ORM + PostgreSQL, Winston logging, and Vercel deployment.
+                                    </span>
                                 </li>
                             </ul>
                         </div>

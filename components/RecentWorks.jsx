@@ -77,17 +77,8 @@ export default function RecentWorks() {
             desc: "IEMS: Collaborative Study Platform connects students, tutors, and administrators to streamline scheduling, resource sharing, and management.",
             to: "/details1",
         },
-
         {
             id: 3,
-            img: "/assets/Screenshot_4.jpg",
-            link: "https://ride-booking-nexus-frontend.vercel.app/",
-            desc: "Ride Booking Nexus is a full-stack application that allows users to book rides and manage their bookings(Rider, Driver and Admin) Roles",
-            to: "/details6",
-        },
-
-        {
-            id: 4,
             img: "/assets/Screenshot_75.webp",
             link: "https://tech-tales2025.netlify.app/",
             desc: "Tech-Tales is a feature-rich blogging app with comments, calendar, and wishlist integration to enhance writing experiences.",
@@ -96,16 +87,20 @@ export default function RecentWorks() {
     ];
 
     const nextProjects = [
-
         {
             id: 1,
+            img: "/assets/Screenshot_4.jpg",
+            link: "https://road-mate-microservice.vercel.app/",
+            desc: "RoadMate: Real-time ride-sharing & fleet dispatch platform built with Next.js 16 (App Router), React 19, Socket.IO microservice, Leaflet geospatial tracking, ZegoCloud Video KYC, and Stripe cashless payments.",
+            to: "/details6",
+        },
+        {
+            id: 2,
             img: "/assets/Screenshot_2.jpg",
             link: "https://ai-job-assistant-five.vercel.app/",
-            desc: "AI Job Assistant is a smart career platform offering AI resume checking, job matching, interview scheduling, and more.",
+            desc: "JobAI: AI-powered career platform built with Next.js 16, TypeScript, LangChain & LangGraph agents, PDF vector embeddings, JSearch jobs, and real-time Vapi voice mock interviews.",
             to: "/details5",
         },
-       
-
     ];
 
     return (
@@ -123,25 +118,27 @@ export default function RecentWorks() {
             <Tabs selectedTabClassName="bg-[#9463F8]/10 !text-white/50 shadow-lg shadow-[#9463F8]/50">
                 <TabList className="flex flex-wrap justify-center gap-4 text-sm sm:text-base lg:text-lg mt-12 mb-6 bg-black/30 rounded-full p-3 font-semibold text-white">
                     <Tab className="px-4 py-2 rounded-full cursor-pointer hover:bg-[#9463F8]/20 focus:outline-none focus:bg-[#9463F8]/30">
-                        MERN Stack Projects
+                        Next.js Projects
                     </Tab>
                     <Tab className="px-4 py-2 rounded-full cursor-pointer hover:bg-[#9463F8]/20 focus:outline-none focus:bg-[#9463F8]/30">
-                        Next.js Projects
+                        React.js Projects
                     </Tab>
                 </TabList>
 
+                {/* TabPanel 1: Next.js Projects */}
                 <TabPanel>
-                    <div className="mt-24  grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 space-y-56">
-                        {mernProjects.map((proj) => (
+                    <div className="mt-24 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-y-56 gap-x-10">
+                        {nextProjects.map((proj) => (
                             <ProjectCard key={proj.id} {...proj} />
                         ))}
                     </div>
                 </TabPanel>
 
+                {/* TabPanel 2: MERN Stack Projects */}
                 <TabPanel>
-                    <div className="grid grid-cols-1 md:grid-cols-2 mt-24">
-                        {nextProjects.map((proj, idx) => (
-                            <ProjectCard key={idx} {...proj} />
+                    <div className="mt-24 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-y-56 gap-x-10">
+                        {mernProjects.map((proj) => (
+                            <ProjectCard key={proj.id} {...proj} />
                         ))}
                     </div>
                 </TabPanel>

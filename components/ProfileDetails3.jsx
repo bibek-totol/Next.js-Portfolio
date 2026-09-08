@@ -10,6 +10,7 @@ import { Pagination, Autoplay, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import { BookOpen, MessageSquare, Calendar, Bookmark, Layers } from "lucide-react";
 
 const ProfileDetails3 = () => {
     const images = [
@@ -113,14 +114,56 @@ const ProfileDetails3 = () => {
                                 </Swiper>
                             </Suspense>
                             <h3 className="text-lg mt-4">Key Features</h3>
-                            <ul className="mt-2 space-y-2 ">
+                            <ul className="mt-2 space-y-2.5">
+                                <li className="pookie3 p-3 sm:p-3.5 rounded-xl flex items-start gap-3 text-sm font-normal">
+                                    <span className="w-7 h-7 rounded-lg bg-cyan-500/20 border border-cyan-400/40 flex items-center justify-center flex-shrink-0 text-cyan-300 mt-0.5 shadow-sm shadow-cyan-500/20">
+                                        <BookOpen className="w-4 h-4" />
+                                    </span>
+                                    <span className="flex-1 leading-relaxed">
+                                        <strong className="text-white font-bold mr-1">Blog Management:</strong>
+                                        Users can add, view, and manage blogs through dedicated sections such as &apos;All Blogs&apos; and &apos;Add Blogs&apos;. This makes it easy for users to navigate through the content and contribute their own posts.
+                                    </span>
+                                </li>
 
-                                <li className="pookie3 p-3 rounded-lg">🔹 Blog Management: Users can add, view, and manage blogs through dedicated sections such as &apos;All Blogs&apos; and &apos;Add Blogs&apos;. This makes it easy for users to navigate through the content and contribute their own posts. </li>
-                                <li className="pookie3 p-3 rounded-lg">🔹 Engagement through Comments: The website includes a comment system that allows readers to leave feedback on posts. This feature can enhance user engagement and foster discussions around the blog content.</li>
-                                <li className="pookie3 p-3 rounded-lg">🔹 Calendar Feature: The &apos;Calendar section allows users to keep track of events, blog posts, or deadlines, improving the organization of content and ensuring users don&apos;t miss important dates related to the blogging experience.</li>
-                                <li className="pookie3 p-3 rounded-lg">🔹 Wishlist Functionality: Users can save blogs or articles to a &apos;WishList&apos; for easy access later. This feature allows readers to curate their personal list of interesting content they wish to explore further.</li>
-                                <li className="pookie3 p-3 rounded-lg">🔹 These features collectively create a comprehensive and user-friendly blogging platform for both content creators and readers.</li>
+                                <li className="pookie3 p-3 sm:p-3.5 rounded-xl flex items-start gap-3 text-sm font-normal">
+                                    <span className="w-7 h-7 rounded-lg bg-purple-500/20 border border-purple-400/40 flex items-center justify-center flex-shrink-0 text-purple-300 mt-0.5 shadow-sm shadow-purple-500/20">
+                                        <MessageSquare className="w-4 h-4" />
+                                    </span>
+                                    <span className="flex-1 leading-relaxed">
+                                        <strong className="text-white font-bold mr-1">Engagement through Comments:</strong>
+                                        The website includes a comment system that allows readers to leave feedback on posts. This feature can enhance user engagement and foster discussions around the blog content.
+                                    </span>
+                                </li>
 
+                                <li className="pookie3 p-3 sm:p-3.5 rounded-xl flex items-start gap-3 text-sm font-normal">
+                                    <span className="w-7 h-7 rounded-lg bg-emerald-500/20 border border-emerald-400/40 flex items-center justify-center flex-shrink-0 text-emerald-300 mt-0.5 shadow-sm shadow-emerald-500/20">
+                                        <Calendar className="w-4 h-4" />
+                                    </span>
+                                    <span className="flex-1 leading-relaxed">
+                                        <strong className="text-white font-bold mr-1">Calendar Feature:</strong>
+                                        The &apos;Calendar&apos; section allows users to keep track of events, blog posts, or deadlines, improving the organization of content and ensuring users don&apos;t miss important dates related to the blogging experience.
+                                    </span>
+                                </li>
+
+                                <li className="pookie3 p-3 sm:p-3.5 rounded-xl flex items-start gap-3 text-sm font-normal">
+                                    <span className="w-7 h-7 rounded-lg bg-pink-500/20 border border-pink-400/40 flex items-center justify-center flex-shrink-0 text-pink-300 mt-0.5 shadow-sm shadow-pink-500/20">
+                                        <Bookmark className="w-4 h-4" />
+                                    </span>
+                                    <span className="flex-1 leading-relaxed">
+                                        <strong className="text-white font-bold mr-1">Wishlist Functionality:</strong>
+                                        Users can save blogs or articles to a &apos;WishList&apos; for easy access later. This feature allows readers to curate their personal list of interesting content they wish to explore further.
+                                    </span>
+                                </li>
+
+                                <li className="pookie3 p-3 sm:p-3.5 rounded-xl flex items-start gap-3 text-sm font-normal">
+                                    <span className="w-7 h-7 rounded-lg bg-blue-500/20 border border-blue-400/40 flex items-center justify-center flex-shrink-0 text-blue-300 mt-0.5 shadow-sm shadow-blue-500/20">
+                                        <Layers className="w-4 h-4" />
+                                    </span>
+                                    <span className="flex-1 leading-relaxed">
+                                        <strong className="text-white font-bold mr-1">Platform Experience:</strong>
+                                        These features collectively create a comprehensive, engaging, and user-friendly blogging platform for both content creators and readers.
+                                    </span>
+                                </li>
                             </ul>
                         </div>
                     </div>
