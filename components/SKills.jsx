@@ -3,94 +3,106 @@
 import React from 'react';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-import { CodeXml, Database, Layout, ShieldCheck, Server } from "lucide-react";
+import { CodeXml, Database, Layout, Server, Bot, ShieldCheck } from "lucide-react";
 
 export default function Skills() {
-    // 1. Data array to keep the return statement clean
     const timelineData = [
         {
-            title: "Programming Languages",
+            title: "Programming & Backend APIs",
             icon: <CodeXml />,
             color: "#9463F8",
-            bgColor: "rgba(148, 99, 248, 0.1)",
-            skills: ['C++', 'JavaScript', 'TypeScript'],
-            desc: "Building high-performance applications and scalable web solutions."
+            bgColor: "rgba(148, 99, 248, 0.12)",
+            skills: ['JavaScript (ES6+)', 'TypeScript', 'Node.js', 'Express.js', 'REST APIs', 'GraphQL', 'HTTP/JSON', 'Third-Party APIs'],
+            desc: "Developing robust server-side microservices, high-throughput RESTful and GraphQL endpoints, and secure API integrations."
         },
         {
-            title: "Frameworks",
-            icon: <Layout />,
-            color: "#3b82f6",
-            bgColor: "rgba(59, 130, 246, 0.1)",
-            skills: ['React.js', 'Next.js', 'Express.js'],
-            desc: "Specialized in SEO-friendly Next.js and dynamic React interfaces."
-        },
-        {
-            title: "Data Management",
+            title: "Databases & In-Memory Caching",
             icon: <Database />,
-            color: "#10b981",
-            bgColor: "rgba(16, 185, 129, 0.1)",
-            skills: ['Mongoose', 'PostgreSQL', 'Prisma', 'Redis'],
-            desc: "Architecting robust schemas and high-speed caching."
+            color: "#10B981",
+            bgColor: "rgba(16, 185, 129, 0.12)",
+            skills: ['PostgreSQL', 'MongoDB', 'Mongoose', 'Redis (ioredis)'],
+            desc: "Relational schema design, document data modeling, and sub-millisecond in-memory caching for high-traffic geospatial endpoints."
         },
         {
-            title: "Backend & Security",
-            icon: <ShieldCheck />,
-            color: "#ef4444",
-            bgColor: "rgba(239, 68, 68, 0.1)",
-            skills: ['Auth', 'JWT Tokens', 'Middleware', 'Rate Limiting'],
-            desc: "Implementing secure session handling and DDoS protection."
+            title: "Frontend Architecture & UI Systems",
+            icon: <Layout />,
+            color: "#38BDF8",
+            bgColor: "rgba(56, 189, 248, 0.12)",
+            skills: ['React.js', 'Next.js 15', 'Tailwind CSS', 'SASS / CSS3', 'Ant Design', 'Bootstrap', 'Olova UI Library'],
+            desc: "Component-driven architecture, dark-mode design systems, open-source UI libraries, and highly responsive web experiences."
         },
         {
-            title: "Advanced Architecture",
+            title: "DevOps, Cloud Infrastructure & Observability",
             icon: <Server />,
-            color: "#f59e0b",
-            bgColor: "rgba(245, 158, 11, 0.1)",
-            skills: ['Microservices', 'Docker', 'K8s'],
-            desc: "Designing decoupled, resilient systems that scale horizontally."
+            color: "#F59E0B",
+            bgColor: "rgba(245, 158, 11, 0.12)",
+            skills: ['CI/CD', 'Docker', 'Kubernetes', 'AWS', 'Prometheus', 'Grafana', 'Nginx', 'Docker Compose'],
+            desc: "Automated CI/CD pipelines to AWS, production Docker containerization, Kubernetes cluster orchestration, and metrics monitoring with Prometheus & Grafana."
+        },
+        {
+            title: "AI Engineering, Agents & Automation",
+            icon: <Bot />,
+            color: "#EC4899",
+            bgColor: "rgba(236, 72, 153, 0.12)",
+            skills: ['Python', 'LLM APIs', 'RAG', 'Vector DB', 'LangChain', 'LangGraph', 'Agents', 'n8n', 'AI Evaluation'],
+            desc: "Autonomous AI Agents with LangGraph & LangChain, production RAG with Vector DBs, Python LLM APIs, n8n workflows, and systematic AI Evaluation."
+        },
+        {
+            title: "Competitive Programming & Foundations",
+            icon: <ShieldCheck />,
+            color: "#8B5CF6",
+            bgColor: "rgba(139, 92, 246, 0.12)",
+            skills: ['340+ Problems Solved', 'Data Structures', 'Algorithms', 'Codeforces', 'CodeChef', 'LeetCode', 'ICPC Preliminary'],
+            desc: "Strong computer science foundations, optimal time-complexity design, and independent analytical debugging."
         }
     ];
 
-
-
     return (
-        <div className='p-10 mt-10 bg-transparent'>
-            <section className="text-center mt-20 px-5" aria-label="Bibek Bhowmick Technical Skills" id="skills-section">
-                <h2 className="text-4xl lg:text-6xl font-bold text-white">
-                    Bibek Bhowmick's <span className="text-purple-400">Technical Skills</span>
+        <div className='p-6 sm:p-10 mt-10 bg-transparent'>
+            <section className="text-center mt-12 sm:mt-20 px-4 max-w-7xl mx-auto" aria-label="Bibek Bhowmick Technical Skills" id="skills-section">
+                <h2 className="text-3xl sm:text-4xl lg:text-6xl font-extrabold text-white">
+                    Bibek Bhowmick's <span className="bg-gradient-to-r from-[#9463F8] via-[#C084FC] to-[#38BDF8] bg-clip-text text-transparent">Technical Skills</span>
                 </h2>
-                <p className="text-[#B694FA]/80 max-w-2xl mx-auto mt-4 text-sm sm:text-base">
-                    Full Stack Web Developer proficient in modern technologies including React.js, Next.js, Node.js, Express.js, MongoDB, PostgreSQL, and cloud architecture.
-                    Continuously learning and applying industry best practices.
+                <p className="text-[#C5B4E3] max-w-2xl mx-auto mt-4 text-sm sm:text-base leading-relaxed">
+                    Full Stack Engineer proficient across JavaScript (ES6+), TypeScript, React.js, Next.js, Node.js, PostgreSQL, MongoDB, Redis, Docker, and AI workflow automation.
                 </p>
 
-                <VerticalTimeline lineColor="#9463F8">
-                    {timelineData.map((item, index) => (
-                        <VerticalTimelineElement
-                            key={index}
-                            contentStyle={{
-                                background: item.bgColor,
-                                color: '#fff',
-                                border: `1px solid ${item.color}80`,
-                                borderRadius: '15px'
-                            }}
-                            contentArrowStyle={{ borderRight: `10px solid ${item.color}80` }}
-                            iconStyle={{ background: item.color, color: '#fff' }}
-                            icon={item.icon}
-                        >
-                            <h3 className="text-xl font-bold text-left" style={{ color: item.color }}>{item.title}</h3>
-                            <div className="flex flex-wrap gap-2 mt-4">
-                                {item.skills.map(s => (
-                                    <span key={s} className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs font-semibold">
-                                        {s}
-                                    </span>
-                                ))}
-                            </div>
-                            <p className="text-gray-300 text-sm mt-3 text-left">{item.desc}</p>
-                        </VerticalTimelineElement>
-                    ))}
-                </VerticalTimeline>
-
-
+                <div className="mt-12 sm:mt-16">
+                    <VerticalTimeline lineColor="#9463F8">
+                        {timelineData.map((item, index) => (
+                            <VerticalTimelineElement
+                                key={index}
+                                contentStyle={{
+                                    background: item.bgColor,
+                                    color: '#fff',
+                                    border: `1px solid ${item.color}80`,
+                                    borderRadius: '16px',
+                                    boxShadow: `0 10px 30px -10px ${item.color}30`
+                                }}
+                                contentArrowStyle={{ borderRight: `10px solid ${item.color}80` }}
+                                iconStyle={{ background: item.color, color: '#fff' }}
+                                icon={item.icon}
+                            >
+                                <h3 className="text-lg sm:text-xl font-bold text-left" style={{ color: item.color }}>
+                                    {item.title}
+                                </h3>
+                                <div className="flex flex-wrap gap-1.5 mt-3.5">
+                                    {item.skills.map(s => (
+                                        <span
+                                            key={s}
+                                            className="px-2.5 py-1 bg-white/10 border border-white/15 rounded-lg text-xs font-semibold text-white/95"
+                                        >
+                                            {s}
+                                        </span>
+                                    ))}
+                                </div>
+                                <p className="text-gray-300 text-xs sm:text-sm mt-3 text-left leading-relaxed">
+                                    {item.desc}
+                                </p>
+                            </VerticalTimelineElement>
+                        ))}
+                    </VerticalTimeline>
+                </div>
             </section>
         </div>
     );

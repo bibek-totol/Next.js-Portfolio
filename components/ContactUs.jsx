@@ -59,11 +59,7 @@ const ContactUs = () => {
                 <h2 className="text-4xl lg:text-6xl font-bold text-white">
                     About <span className="text-purple-400">Bibek Bhowmick</span>
                 </h2>
-                <p className="text-gray-400 mt-4 max-w-2xl mx-auto text-sm sm:text-base">
-                    Bibek Bhowmick is a passionate Full Stack Web Developer from Bangladesh with 2+ years of experience building modern web applications.
-                    Specializing in React, Next.js, Node.js, and MongoDB, I transform complex ideas into elegant, user-friendly digital solutions.
-                    Available for freelance projects, full-time opportunities, and collaborations worldwide.
-                </p>
+               
             </header>
             <div className=" flex justify-center items-center text-white px-4 mt-10">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10 p-2 rounded-lg max-w-6xl w-full">

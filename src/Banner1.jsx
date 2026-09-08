@@ -8,15 +8,15 @@ import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { Sparkles, ArrowRight, Star, Rocket, Code2, Briefcase, Award, CheckCircle2 } from "lucide-react";
 
 export default function Banner1() {
-    const techTags = ['React.js', 'Next.js 15', 'Node.js', 'TypeScript', 'Tailwind CSS', 'PostgreSQL', 'MongoDB'];
+     const techTags = ['JavaScript (ES6+)', 'TypeScript', 'React.js', 'Next.js', 'Node.js', 'PostgreSQL', 'MongoDB', 'Redis', 'Docker', 'Kubernetes', 'AWS', 'CI/CD','AI Automation'];
 
     return (
         <article className="relative overflow-hidden pt-6 pb-12 lg:pt-10 lg:pb-16" itemScope itemType="https://schema.org/Person">
             {/* Hidden SEO content for search crawlers */}
             <div className="sr-only">
-                <h1>Bibek Bhowmick - Full Stack Web Developer Portfolio</h1>
+                <h1>Bibek Bhowmick - Full Stack Engineer Portfolio</h1>
                 <p>
-                    Bibek Bhowmick is a professional Full Stack Web Developer from Bangladesh specializing in React, Next.js, Node.js, and modern web technologies. Hire Bibek Bhowmick for your next web development project.
+                    Bibek Bhowmick is a professional Full Stack Engineer from Bangladesh specializing in JavaScript, TypeScript, React.js, Next.js, Node.js, Express, PostgreSQL, MongoDB, Redis, Docker, and AWS.
                 </p>
             </div>
 
@@ -51,7 +51,7 @@ export default function Banner1() {
                             >
                                 Full Stack
                             </span>{" "}
-                            <span className="text-[#F1E8FF]">Web Developer</span>
+                            <span className="text-[#F1E8FF]">Engineer</span>
                         </h1>
 
                         {/* Description / Bio */}
@@ -59,7 +59,7 @@ export default function Banner1() {
                             className="text-base sm:text-lg lg:text-xl text-[#C7B7E8] leading-relaxed mt-5 font-normal max-w-2xl" 
                             itemProp="description"
                         >
-                            Professional software engineer with <span className="text-cyan-300 font-semibold">2+ years of experience</span> crafting modern, responsive web applications using <span className="text-purple-300 font-semibold">React</span>, <span className="text-purple-300 font-semibold">Next.js</span>, and <span className="text-cyan-300 font-semibold">Node.js</span>. I solve complex product challenges to build scalable, high-integrity digital experiences that make an impact.
+                            Full Stack Engineer with <span className="text-cyan-300 font-semibold">1.5+ years of experience</span> building production web applications using <span className="text-purple-300 font-semibold">JavaScript (ES6+)</span>, <span className="text-purple-300 font-semibold">TypeScript</span>, <span className="text-purple-300 font-semibold">React.js</span>, and <span className="text-cyan-300 font-semibold">Node.js/Express.js</span> with <span className="text-cyan-300 font-semibold">PostgreSQL, MongoDB, and Redis</span>. Solved <span className="text-amber-300 font-semibold">340+ algorithmic challenges</span> and achieved a <span className="text-emerald-300 font-semibold">10x production performance optimization</span> with Docker and AWS.
                         </p>
 
                         {/* Core Skills Chips Cluster */}
@@ -83,9 +83,9 @@ export default function Banner1() {
                                 {/* Download CV Button */}
                                 <a
                                     href="/assets/FullStack Developer CV(Bibek).pdf"
-                                    download="Bibek_Bhowmick_Full_Stack_Developer_CV.pdf"
+                                    download="FullStack Developer CV(Bibek).pdf"
                                     className="group relative inline-flex items-center gap-2.5 px-6 sm:px-7 py-3.5 rounded-full font-bold text-white text-sm sm:text-base overflow-hidden bg-gradient-to-r from-[#7C3AED] via-[#9333EA] to-[#06B6D4] shadow-[0_4px_25px_rgba(124,58,237,0.45)] hover:shadow-[0_6px_30px_rgba(6,182,212,0.5)] hover:scale-105 active:scale-95 transition-all duration-300"
-                                    title="Download Bibek Bhowmick Full Stack Developer Resume"
+                                    title="Download Bibek Bhowmick Full Stack Engineer Resume"
                                 >
                                     <span className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 rounded-full" />
                                     <MdOutlineFileDownload className="text-xl group-hover:-translate-y-0.5 group-hover:scale-110 transition-transform duration-300" aria-hidden="true" />
@@ -110,7 +110,7 @@ export default function Banner1() {
                                         href="https://www.linkedin.com/in/bibekbhowmick/"
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        title="Bibek Bhowmick LinkedIn Profile - Full Stack Developer"
+                                        title="Bibek Bhowmick LinkedIn Profile - Full Stack Engineer"
                                         itemProp="sameAs"
                                         aria-label="Visit Bibek Bhowmick on LinkedIn"
                                         className="p-3 rounded-full border border-purple-500/30 bg-[#141838]/80 text-purple-200 hover:text-cyan-300 hover:border-cyan-400 hover:bg-purple-900/40 hover:shadow-[0_0_15px_rgba(34,211,238,0.4)] hover:scale-110 active:scale-95 transition-all duration-300"
@@ -150,7 +150,7 @@ export default function Banner1() {
                                 <Image
                                     className="w-full h-auto object-cover object-center transform group-hover:scale-105 transition-transform duration-700 ease-out"
                                     src="/assets/Screenshot_4-Photoroom.webp"
-                                    alt="Bibek Bhowmick - Professional Full Stack Web Developer and React Expert from Bangladesh"
+                                    alt="Bibek Bhowmick - Professional Full Stack Engineer and React Expert from Bangladesh"
                                     width={420}
                                     height={420}
                                     priority
@@ -159,7 +159,7 @@ export default function Banner1() {
                                 {/* Bottom subtle gradient fade */}
                                 <div className="absolute inset-0 bg-gradient-to-t from-[#0d1024]/70 via-transparent to-transparent pointer-events-none" />
                             </div>
-                            <figcaption className="sr-only">Bibek Bhowmick - Full Stack Developer Portfolio Photo</figcaption>
+                            <figcaption className="sr-only">Bibek Bhowmick - Full Stack Engineer Portfolio Photo</figcaption>
                         </figure>
 
                         {/* Floating Glass Badge 1 - Top Left */}
@@ -173,7 +173,7 @@ export default function Banner1() {
                             </div>
                             <div>
                                 <p className="text-[10px] sm:text-xs text-purple-300 font-semibold">Experience</p>
-                                <p className="text-xs sm:text-sm font-bold text-white">2+ Years Pro</p>
+                                <p className="text-xs sm:text-sm font-bold text-white">1.5+ Years Pro</p>
                             </div>
                         </motion.div>
 
@@ -187,8 +187,8 @@ export default function Banner1() {
                                 <Rocket className="w-5 h-5 text-white" />
                             </div>
                             <div>
-                                <p className="text-[10px] sm:text-xs text-cyan-300 font-semibold">Delivered</p>
-                                <p className="text-xs sm:text-sm font-bold text-white">20+ Projects</p>
+                                <p className="text-[10px] sm:text-xs text-cyan-300 font-semibold">Problem Solving</p>
+                                <p className="text-xs sm:text-sm font-bold text-white">340+ Problems</p>
                             </div>
                         </motion.div>
 
@@ -199,7 +199,7 @@ export default function Banner1() {
                             className="hidden sm:flex absolute top-1/2 -right-6 -translate-y-1/2 bg-[#131738]/95 border border-pink-400/40 backdrop-blur-xl rounded-2xl px-3 py-2 shadow-lg items-center gap-2 z-40"
                         >
                             <span className="flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
-                            <span className="text-xs font-bold text-purple-200">Full Stack Ready</span>
+                            <span className="text-xs font-bold text-purple-200">10x Speedup Delivered</span>
                         </motion.div>
                     </motion.div>
 
@@ -218,11 +218,11 @@ export default function Banner1() {
                         <div className="flex flex-col items-center text-center p-2 group">
                             <div className="flex items-center gap-1.5">
                                 <span className="text-3xl sm:text-4xl lg:text-5xl font-black bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent group-hover:scale-105 transition-transform">
-                                    2+
+                                    1.5+
                                 </span>
                             </div>
                             <p className="text-xs sm:text-sm text-purple-200/80 font-medium mt-1.5">
-                                Years Development Experience
+                                Years Production Experience
                             </p>
                         </div>
 
@@ -230,11 +230,11 @@ export default function Banner1() {
                         <div className="flex flex-col items-center text-center p-2 border-l border-purple-500/15 group">
                             <div className="flex items-center gap-1.5">
                                 <span className="text-3xl sm:text-4xl lg:text-5xl font-black bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent group-hover:scale-105 transition-transform">
-                                    20+
+                                    340+
                                 </span>
                             </div>
                             <p className="text-xs sm:text-sm text-cyan-200/80 font-medium mt-1.5">
-                                Full Stack Projects Completed
+                                Problems Solved (LeetCode & CF)
                             </p>
                         </div>
 
@@ -242,11 +242,11 @@ export default function Banner1() {
                         <div className="flex flex-col items-center text-center p-2 border-t md:border-t-0 md:border-l border-purple-500/15 group">
                             <div className="flex items-center gap-1.5">
                                 <span className="text-3xl sm:text-4xl lg:text-5xl font-black bg-gradient-to-r from-emerald-400 to-teal-300 bg-clip-text text-transparent group-hover:scale-105 transition-transform">
-                                    15+
+                                    4+
                                 </span>
                             </div>
                             <p className="text-xs sm:text-sm text-emerald-200/80 font-medium mt-1.5">
-                                Modern Tech Stack Tools
+                                Flagship Production Systems
                             </p>
                         </div>
 
@@ -254,11 +254,11 @@ export default function Banner1() {
                         <div className="flex flex-col items-center text-center p-2 border-t md:border-t-0 md:border-l border-purple-500/15 group">
                             <div className="flex items-center gap-1.5">
                                 <span className="text-3xl sm:text-4xl lg:text-5xl font-black bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent group-hover:scale-105 transition-transform">
-                                    99%
+                                    10x
                                 </span>
                             </div>
                             <p className="text-xs sm:text-sm text-amber-200/80 font-medium mt-1.5">
-                                Code Quality & Satisfaction
+                                Production Performance Boost
                             </p>
                         </div>
                     </div>
