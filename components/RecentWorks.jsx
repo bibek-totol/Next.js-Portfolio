@@ -38,7 +38,7 @@ const ProjectCard = ({ img, link, desc, to }) => (
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    Live Link
+                    {link.includes("github.com") ? "GitHub Repository" : "Live Link"}
                 </a>
                 <p className="text-white/80 text-sm sm:text-base flex-grow">{desc}</p>
 
@@ -100,6 +100,13 @@ export default function RecentWorks() {
             link: "https://ai-job-assistant-five.vercel.app/",
             desc: "JobAI: AI-powered career platform built with Next.js 16, TypeScript, LangChain & LangGraph agents, PDF vector embeddings, JSearch jobs, and real-time Vapi voice mock interviews.",
             to: "/details5",
+        },
+        {
+            id: 3,
+            img: "/assets/erp-pic/Screenshot_14.jpg",
+            link: "https://github.com/bibek-totol/NADA-ERP-FUll-STACK",
+            desc: "NADA ERP: Institutional-grade Enterprise Resource Planning system (BARD ERP) built with Next.js 16 (App Router), React 18.3, TypeScript 5.8, MongoDB (Mongoose 9), and Google Gemini 2.5 Flash AI Assistant across 12+ enterprise modules.",
+            to: "/details8",
         },
     ];
 

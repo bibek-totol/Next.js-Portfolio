@@ -22,23 +22,21 @@ import {
 
 const ProfileDetails6 = () => {
     const images = [
-        "/assets/Screenshot_4.jpg",
-        "/assets/Screenshot_30.jpg",
-        "/assets/Screenshot_31.jpg",
-        "/assets/Screenshot_32.jpg",
-        "/assets/Screenshot_33.jpg",
-        "/assets/Screenshot_34.jpg",
-        "/assets/Screenshot_35.jpg",
-        "/assets/Screenshot_36.jpg",
-        "/assets/Screenshot_37.jpg",
-        "/assets/Screenshot_38.jpg",
-        "/assets/Screenshot_39.jpg",
-        "/assets/Screenshot_40.jpg",
-        "/assets/Screenshot_41.jpg",
-        "/assets/Screenshot_42.jpg",
-        "/assets/Screenshot_43.jpg",
-        "/assets/Screenshot_44.jpg",
-        "/assets/Screenshot_45.jpg"
+        "/assets/ride-pic/Screenshot_14.jpg",
+        "/assets/ride-pic/Screenshot_15.jpg",
+        "/assets/ride-pic/Screenshot_16.jpg",
+        "/assets/ride-pic/Screenshot_17.jpg",
+        "/assets/ride-pic/Screenshot_18.jpg",
+        "/assets/ride-pic/Screenshot_19.jpg",
+        "/assets/ride-pic/Screenshot_20.jpg",
+        "/assets/ride-pic/Screenshot_21.jpg",
+        "/assets/ride-pic/Screenshot_25.jpg",
+        "/assets/ride-pic/Screenshot_26.jpg",
+        "/assets/ride-pic/Screenshot_28.jpg",
+        "/assets/ride-pic/Screenshot_29.jpg",
+        "/assets/ride-pic/Screenshot_34.jpg",
+        "/assets/ride-pic/Screenshot_35.jpg",
+        "/assets/ride-pic/Screenshot_36.jpg"
     ];
 
     return (
