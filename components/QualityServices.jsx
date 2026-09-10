@@ -103,9 +103,7 @@ export default function QualityServices() {
                     </span>
                 </h2>
 
-                <p className="text-[#C5B4E3] text-sm sm:text-base md:text-lg font-normal mt-4 leading-relaxed">
-                    Architecting modern full-stack web applications, resilient cloud infrastructures, and intelligent multi-agent AI solutions with sub-second performance.
-                </p>
+               
             </div>
 
             {/* Services 2x2 Grid */}

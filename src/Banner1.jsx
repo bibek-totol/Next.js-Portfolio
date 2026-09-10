@@ -8,7 +8,7 @@ import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { Sparkles, ArrowRight, Star, Rocket, Code2, Briefcase, Award, CheckCircle2 } from "lucide-react";
 
 export default function Banner1() {
-     const techTags = ['JavaScript (ES6+)', 'TypeScript', 'React.js', 'Next.js', 'Node.js', 'PostgreSQL', 'MongoDB', 'Redis', 'Docker', 'Kubernetes', 'AWS', 'CI/CD','AI Automation'];
+    const techTags = ['JavaScript (ES6+)', 'TypeScript', 'React.js', 'Next.js', 'Node.js', 'PostgreSQL', 'MongoDB', 'Redis', 'Docker', 'Kubernetes', 'AWS', 'CI/CD', 'AI Automation'];
 
     return (
         <article className="relative overflow-hidden pt-6 pb-12 lg:pt-10 lg:pb-16" itemScope itemType="https://schema.org/Person">
@@ -28,25 +28,25 @@ export default function Banner1() {
                 <header className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center relative">
 
                     {/* Left Section - Main Content (Cols: 7) */}
-                    <motion.div 
+                    <motion.div
                         initial={{ opacity: 0, y: 25 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.7, ease: "easeOut" }}
                         className="lg:col-span-7 z-20"
                     >
                         {/* Status / Availability Pill */}
-                       
+
 
                         {/* Name & Greeting */}
                         <p className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#E2D5FC] flex items-center gap-2">
                             Hi, I'm <span itemProp="name" className="text-white drop-shadow-[0_2px_10px_rgba(255,255,255,0.2)]">Bibek Bhowmick</span>
-                           
+
                         </p>
 
                         {/* Primary Headline with Rich Gradient */}
                         <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tight mt-3 leading-[1.15]">
-                            <span 
-                                itemProp="jobTitle" 
+                            <span
+                                itemProp="jobTitle"
                                 className="bg-gradient-to-r from-[#9463F8] via-[#C084FC] to-[#38BDF8] bg-clip-text text-transparent drop-shadow-[0_4px_20px_rgba(148,99,248,0.3)]"
                             >
                                 Full Stack
@@ -55,11 +55,11 @@ export default function Banner1() {
                         </h1>
 
                         {/* Description / Bio */}
-                        <p 
-                            className="text-base sm:text-lg lg:text-xl text-[#C7B7E8] leading-relaxed mt-5 font-normal max-w-2xl" 
+                        <p
+                            className="text-base sm:text-lg lg:text-xl text-[#C7B7E8] leading-relaxed mt-5 font-normal max-w-2xl"
                             itemProp="description"
                         >
-                            Full Stack Engineer with <span className="text-cyan-300 font-semibold">1.5+ years of experience</span> building production web applications using <span className="text-purple-300 font-semibold">JavaScript (ES6+)</span>, <span className="text-purple-300 font-semibold">TypeScript</span>, <span className="text-purple-300 font-semibold">React.js</span>, and <span className="text-cyan-300 font-semibold">Node.js/Express.js</span> with <span className="text-cyan-300 font-semibold">PostgreSQL, MongoDB, and Redis</span>. Solved <span className="text-amber-300 font-semibold">340+ algorithmic challenges</span> and achieved a <span className="text-emerald-300 font-semibold">10x production performance optimization</span> with Docker and AWS.
+                            Full Stack Engineer with <span className="text-cyan-300 font-semibold">1.5+ years of experience</span> building production web applications using <span className="text-purple-300 font-semibold">JavaScript (ES6+)</span>, <span className="text-purple-300 font-semibold">TypeScript</span>, <span className="text-purple-300 font-semibold">React.js</span>, and <span className="text-cyan-300 font-semibold">Node.js/Express.js</span> with <span className="text-cyan-300 font-semibold">PostgreSQL, MongoDB, and Redis</span>. Solved <span className="text-amber-300 font-semibold">500+ algorithmic challenges</span> and achieved a <span className="text-emerald-300 font-semibold">10x production performance optimization</span> with Docker,Kubernetes and AWS.
                         </p>
 
                         {/* Core Skills Chips Cluster */}
@@ -135,7 +135,7 @@ export default function Banner1() {
                     </motion.div>
 
                     {/* Right Section - Profile Image Showcase (Cols: 5) */}
-                    <motion.div 
+                    <motion.div
                         initial={{ opacity: 0, scale: 0.9 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
@@ -188,7 +188,7 @@ export default function Banner1() {
                             </div>
                             <div>
                                 <p className="text-[10px] sm:text-xs text-cyan-300 font-semibold">Problem Solving</p>
-                                <p className="text-xs sm:text-sm font-bold text-white">340+ Problems</p>
+                                <p className="text-xs sm:text-sm font-bold text-white">500+ Problems</p>
                             </div>
                         </motion.div>
 
@@ -206,11 +206,11 @@ export default function Banner1() {
                 </header>
 
                 {/* Elevated Professional Statistics Bar */}
-                <motion.section 
+                <motion.section
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.3 }}
-                    className="mt-14 lg:mt-20" 
+                    className="mt-14 lg:mt-20"
                     aria-label="Professional Experience Statistics"
                 >
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 bg-[#131738]/70 border border-purple-500/20 rounded-3xl p-6 sm:p-8 backdrop-blur-xl shadow-[0_15px_40px_rgba(0,0,0,0.35)]">
@@ -230,7 +230,7 @@ export default function Banner1() {
                         <div className="flex flex-col items-center text-center p-2 border-l border-purple-500/15 group">
                             <div className="flex items-center gap-1.5">
                                 <span className="text-3xl sm:text-4xl lg:text-5xl font-black bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent group-hover:scale-105 transition-transform">
-                                    340+
+                                    500+
                                 </span>
                             </div>
                             <p className="text-xs sm:text-sm text-cyan-200/80 font-medium mt-1.5">

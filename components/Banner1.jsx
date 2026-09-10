@@ -8,7 +8,7 @@ import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { Sparkles, ArrowRight, Star, Rocket, Code2, Briefcase, Award, CheckCircle2 } from "lucide-react";
 
 export default function Banner1() {
-    const techTags = ['JavaScript (ES6+)', 'TypeScript', 'React.js', 'Next.js', 'Node.js', 'PostgreSQL', 'MongoDB', 'Redis', 'Docker', 'Kubernetes', 'AWS', 'CI/CD','AI Automation'];
+    const techTags = ['JavaScript (ES6+)', 'TypeScript', 'React.js', 'Next.js', 'Node.js', 'PostgreSQL', 'MongoDB', 'Redis', 'Docker', 'Kubernetes', 'AWS', 'CI/CD', 'AI Automation'];
 
     return (
         <article className="relative overflow-hidden pt-6 pb-12 lg:pt-10 lg:pb-16" itemScope itemType="https://schema.org/Person">
@@ -58,13 +58,13 @@ export default function Banner1() {
                             className="text-base sm:text-lg lg:text-xl text-[#C7B7E8] leading-relaxed mt-5 font-normal max-w-2xl"
                             itemProp="description"
                         >
-                            Full Stack Engineer with <span className="text-cyan-300 font-semibold">1.5+ years of experience</span> building production web applications using <span className="text-purple-300 font-semibold">JavaScript (ES6+)</span>, <span className="text-purple-300 font-semibold">TypeScript</span>, <span className="text-purple-300 font-semibold">React.js</span>, and <span className="text-cyan-300 font-semibold">Node.js/Express.js</span> with <span className="text-cyan-300 font-semibold">PostgreSQL, MongoDB, and Redis</span>. Solved <span className="text-amber-300 font-semibold">340+ algorithmic challenges</span> and achieved a <span className="text-emerald-300 font-semibold">10x production performance optimization</span> with Docker and AWS.
+                            Full Stack Engineer with <span className="text-cyan-300 font-semibold">1.5+ years of experience</span> building production web applications using <span className="text-purple-300 font-semibold">JavaScript (ES6+)</span>, <span className="text-purple-300 font-semibold">TypeScript</span>, <span className="text-purple-300 font-semibold">React.js</span>, and <span className="text-cyan-300 font-semibold">Node.js/Express.js</span> with <span className="text-cyan-300 font-semibold">PostgreSQL, MongoDB, and Redis</span>. Solved <span className="text-amber-300 font-semibold">500+ algorithmic challenges</span> and achieved a <span className="text-emerald-300 font-semibold">10x production performance optimization</span> with Docker,Kubernetes and AWS.
                         </p>
 
                         {/* Core Skills Chips Cluster */}
                         <div className="flex flex-wrap items-center gap-2 mt-6">
                             <span className="text-xs font-bold text-purple-300/70 uppercase tracking-wider mr-1 flex items-center gap-1">
-                                 Focus:
+                                Focus:
                             </span>
                             {techTags.map((tech) => (
                                 <span
@@ -187,7 +187,7 @@ export default function Banner1() {
                             </div>
                             <div>
                                 <p className="text-[10px] sm:text-xs text-cyan-300 font-semibold">Problem Solving</p>
-                                <p className="text-xs sm:text-sm font-bold text-white">340+ Problems</p>
+                                <p className="text-xs sm:text-sm font-bold text-white">500+ Problems</p>
                             </div>
                         </motion.div>
 
@@ -229,7 +229,7 @@ export default function Banner1() {
                         <div className="flex flex-col items-center text-center p-2 border-l border-purple-500/15 group">
                             <div className="flex items-center gap-1.5">
                                 <span className="text-3xl sm:text-4xl lg:text-5xl font-black bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent group-hover:scale-105 transition-transform">
-                                    340+
+                                    500+
                                 </span>
                             </div>
                             <p className="text-xs sm:text-sm text-cyan-200/80 font-medium mt-1.5">

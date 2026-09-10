@@ -1,142 +1,244 @@
+"use client";
+
 import React, { useState } from "react";
-import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import {
+  FaPhoneAlt,
+  FaEnvelope,
+  FaMapMarkerAlt,
+  FaWhatsapp,
+  FaLinkedinIn,
+  FaGithub,
+  FaCopy,
+  FaCheck,
+  FaExternalLinkAlt,
+  FaPaperPlane,
+} from "react-icons/fa";
 
 const ContactUs = () => {
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    phone: "",
-    service: "",
-    message: "",
-  });
+  const [copiedItem, setCopiedItem] = useState(null);
 
-  const [status, setStatus] = useState("");
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    
-    setStatus("Sending...");
-
-    try {
-      const response = await fetch("https://bibek-portfolio-server.vercel.app/send-email", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-
-      const result = await response.json();
-      if (result.success) {
-        setStatus("Email sent successfully!");
-        setFormData({
-          firstName: "",
-          lastName: "",
-          email: "",
-          phone: "",
-          service: "",
-          message: "",
-        });
-      } else {
-        setStatus("Failed to send email. Try again later.");
-      }
-    } catch (error) {
-      console.error("Error sending email:", error);
-      setStatus("Error sending email.");
+  const handleCopy = (text, type) => {
+    if (typeof navigator !== "undefined" && navigator.clipboard?.writeText) {
+      navigator.clipboard.writeText(text);
+      setCopiedItem(type);
+      setTimeout(() => setCopiedItem(null), 2000);
     }
   };
 
   return (
-    <div className="mt-8">
-      <div>
-        <h2 className="text-4xl lg:text-6xl font-bold text-white text-center">
-          About <span className="text-purple-400">Me</span>
-        </h2>
-        <p className="text-gray-400 mt-4 max-w-xl mx-auto text-center">
-          As a junior web developer, my journey has been filled with challenges and growth...
-        </p>
-      </div>
-      <div className=" flex justify-center items-center text-white px-4 mt-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 p-2 rounded-lg max-w-6xl w-full">
-          
-          <div className="bg-white/10 backdrop-blur-md border border-white/10 shadow-xl p-4 md:p-8 rounded-3xl">
-            <h2 className="text-4xl font-bold text-purple-400">Let’s work together!</h2>
-            <p className="text-gray-400 mt-2">
-              I design and code beautifully simple things, and I love what I do.
-            </p>
+    <section
+      className="py-16 px-4 relative overflow-hidden"
+      aria-label="Contact Information"
+      id="contact-section"
+      itemScope
+      itemType="https://schema.org/ContactPage"
+    >
+      {/* Ambient background glow effects */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] bg-purple-600/15 rounded-full blur-[120px] pointer-events-none -z-10" />
+      <div className="absolute bottom-0 right-1/4 w-72 h-72 bg-cyan-500/10 rounded-full blur-[100px] pointer-events-none -z-10" />
 
-            <form className="mt-6 space-y-4 " onSubmit={handleSubmit}>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 ">
-                <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} placeholder="First name" required className="w-full p-3 bg-black/50   border border-gray-700 rounded-md  focus:outline-none focus:ring-2 focus:ring-purple-500" />
-                <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} placeholder="Last name" required className="w-full p-3 bg-black/50 border border-gray-700 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-purple-500" />
+      <div className="max-w-5xl mx-auto">
+        {/* Section Header */}
+        <header className="text-center max-w-3xl mx-auto">
+          {/* Availability Status Badge */}
+          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-purple-900/30 border border-purple-500/30 text-purple-300 text-xs sm:text-sm font-medium mb-6 backdrop-blur-md shadow-inner">
+            <span className="relative flex h-2.5 w-2.5">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+            </span>
+            Available for Freelance & Full-Time Roles
+          </div>
+
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight">
+            Let’s Work{" "}
+            <span className="bg-gradient-to-r from-[#9463F8] via-[#C084FC] to-[#38BDF8] bg-clip-text text-transparent drop-shadow-[0_4px_20px_rgba(148,99,248,0.3)]">
+              Together!
+            </span>
+          </h2>
+
+          <p className="text-gray-300 text-base sm:text-lg mt-4 leading-relaxed max-w-2xl mx-auto font-normal">
+            I design and code beautifully simple things, and I love what I do.
+            Have a project in mind, an opportunity to discuss, or just want to connect?
+            Reach out directly anytime!
+          </p>
+        </header>
+
+        {/* Contact Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+          {/* Card 1: Phone / WhatsApp */}
+          <div className="group relative rounded-3xl bg-white/[0.04] hover:bg-white/[0.07] backdrop-blur-xl border border-white/10 hover:border-purple-500/50 p-6 sm:p-7 transition-all duration-300 shadow-xl flex flex-col justify-between hover:-translate-y-1">
+            <div>
+              <div className="flex items-center justify-between mb-5">
+                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-purple-500/20 to-purple-800/30 border border-purple-500/30 flex items-center justify-center text-purple-400 shadow-inner group-hover:scale-110 group-hover:border-purple-400/60 transition-transform duration-300">
+                  <FaPhoneAlt className="text-xl" />
+                </div>
+                <span className="text-[11px] font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full bg-purple-500/10 text-purple-300 border border-purple-500/20">
+                  Direct Call
+                </span>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="Email address" required className="w-full p-3 bg-black/50 border border-gray-700 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-purple-500" />
-                <input type="tel" name="phone" value={formData.phone} onChange={handleChange} placeholder="Phone number" required className="w-full p-3 bg-black/50 border border-gray-700 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-purple-500" />
-              </div>
-
-              <select name="service" value={formData.service} onChange={handleChange} required className="w-full p-3 bg-black/50 border border-gray-700 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-purple-500">
-                <option value="">Select an option</option>
-                <option value="Front End Development">Front End Development</option>
-                <option value="Back End Development">Back End Development</option>
-                <option value="Full Stack Development">Full Stack Development</option>
-              </select>
-
-              <textarea name="message" value={formData.message} onChange={handleChange} placeholder="Message" required className="w-full p-3 bg-black/50 border border-gray-700 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-purple-500 h-32"></textarea>
-
-              <button type="submit" className="cursor-pointer bg-gradient-to-r from-purple-500 to-purple-700 text-white py-3 px-6 rounded-lg font-bold hover:opacity-80 transition duration-300 w-full">
-                Send Message
-              </button>
-
-              {status && <p className="text-green-500 text-2xl mt-2">{status}</p>}
-            </form>
-          </div>
-
-          {/* Right Side - Contact Info */}
-
-          <div className="flex flex-col space-y-6 mt-10 lg:mt-36">
-          <div className="flex items-center space-x-4">
-            <div className="bg-purple-600 p-3 rounded-full">
-              <FaPhoneAlt className="text-white text-xl" />
-            </div>
-            <div>
-              <p className="text-gray-400">Phone/WhatsApp</p>
-              <p className="text-lg font-semibold">+8801776569120</p>
-            </div>
-          </div>
-
-          <div className="flex items-center space-x-4">
-            <div className="bg-purple-600 p-3 rounded-full">
-              <FaEnvelope className="text-white text-xl" />
-            </div>
-            <div>
-              <p className="text-gray-400">Email</p>
-              <p className="text-lg font-semibold">bibektotol@gmail.com</p>
-            </div>
-          </div>
-
-          <div className="flex items-center space-x-4">
-            <div className="bg-purple-600 p-3 rounded-full">
-              <FaMapMarkerAlt className="text-white text-xl" />
-            </div>
-            <div>
-              <p className="text-gray-400">Address</p>
-              <p className="text-lg font-semibold">
-              Dhaka, Bangladesh
+              <p className="text-gray-400 text-sm font-medium">Phone & WhatsApp</p>
+              <h3 className="text-white text-lg sm:text-xl font-bold mt-1 tracking-wide">
+                +8801776569120
+              </h3>
+              <p className="text-gray-400/80 text-xs mt-2">
+                Available 9:00 AM - 10:00 PM (GMT+6)
               </p>
             </div>
+
+            <div className="mt-6 pt-5 border-t border-white/10 flex items-center gap-2">
+              <a
+                href="https://wa.me/8801776569120"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 inline-flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl bg-emerald-500/20 hover:bg-emerald-500/30 border border-emerald-500/30 text-emerald-300 text-xs sm:text-sm font-semibold transition-all hover:scale-[1.02]"
+              >
+                <FaWhatsapp className="text-base text-emerald-400" />
+                WhatsApp
+              </a>
+              <button
+                type="button"
+                onClick={() => handleCopy("+8801776569120", "phone")}
+                className="inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 text-xs sm:text-sm font-medium transition-all"
+                title="Copy phone number"
+              >
+                {copiedItem === "phone" ? (
+                  <>
+                    <FaCheck className="text-emerald-400" />
+                    <span className="text-emerald-400">Copied</span>
+                  </>
+                ) : (
+                  <>
+                    <FaCopy />
+                    <span>Copy</span>
+                  </>
+                )}
+              </button>
+            </div>
+          </div>
+
+          {/* Card 2: Email */}
+          <div className="group relative rounded-3xl bg-white/[0.04] hover:bg-white/[0.07] backdrop-blur-xl border border-white/10 hover:border-cyan-500/50 p-6 sm:p-7 transition-all duration-300 shadow-xl flex flex-col justify-between hover:-translate-y-1">
+            <div>
+              <div className="flex items-center justify-between mb-5">
+                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-cyan-500/20 to-blue-800/30 border border-cyan-500/30 flex items-center justify-center text-cyan-400 shadow-inner group-hover:scale-110 group-hover:border-cyan-400/60 transition-transform duration-300">
+                  <FaEnvelope className="text-xl" />
+                </div>
+                <span className="text-[11px] font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-500/20">
+                  Primary Mail
+                </span>
+              </div>
+
+              <p className="text-gray-400 text-sm font-medium">Email Address</p>
+              <h3 className="text-white text-base sm:text-lg font-bold mt-1 break-all tracking-tight">
+                bibektotol@gmail.com
+              </h3>
+              <p className="text-gray-400/80 text-xs mt-2">
+                Fast response within 12-24 hours
+              </p>
+            </div>
+
+            <div className="mt-6 pt-5 border-t border-white/10 flex items-center gap-2">
+              <a
+                href="mailto:bibektotol@gmail.com"
+                className="flex-1 inline-flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl bg-cyan-500/20 hover:bg-cyan-500/30 border border-cyan-500/30 text-cyan-300 text-xs sm:text-sm font-semibold transition-all hover:scale-[1.02]"
+              >
+                <FaPaperPlane className="text-xs text-cyan-400" />
+                Send Email
+              </a>
+              <button
+                type="button"
+                onClick={() => handleCopy("bibektotol@gmail.com", "email")}
+                className="inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 text-xs sm:text-sm font-medium transition-all"
+                title="Copy email address"
+              >
+                {copiedItem === "email" ? (
+                  <>
+                    <FaCheck className="text-emerald-400" />
+                    <span className="text-emerald-400">Copied</span>
+                  </>
+                ) : (
+                  <>
+                    <FaCopy />
+                    <span>Copy</span>
+                  </>
+                )}
+              </button>
+            </div>
+          </div>
+
+          {/* Card 3: Location */}
+          <div className="group relative rounded-3xl bg-white/[0.04] hover:bg-white/[0.07] backdrop-blur-xl border border-white/10 hover:border-pink-500/50 p-6 sm:p-7 transition-all duration-300 shadow-xl flex flex-col justify-between hover:-translate-y-1">
+            <div>
+              <div className="flex items-center justify-between mb-5">
+                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-pink-500/20 to-rose-800/30 border border-pink-500/30 flex items-center justify-center text-pink-400 shadow-inner group-hover:scale-110 group-hover:border-pink-400/60 transition-transform duration-300">
+                  <FaMapMarkerAlt className="text-xl" />
+                </div>
+                <span className="text-[11px] font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full bg-pink-500/10 text-pink-300 border border-pink-500/20">
+                  Location
+                </span>
+              </div>
+
+              <p className="text-gray-400 text-sm font-medium">Based in</p>
+              <h3 className="text-white text-lg sm:text-xl font-bold mt-1 tracking-wide">
+                Dhaka, Bangladesh
+              </h3>
+              <p className="text-gray-400/80 text-xs mt-2">
+                Open to remote worldwide & on-site
+              </p>
+            </div>
+
+            <div className="mt-6 pt-5 border-t border-white/10 flex items-center">
+              <span className="w-full text-center py-2.5 px-3 rounded-xl bg-pink-500/10 border border-pink-500/20 text-pink-300 text-xs font-semibold">
+                 Timezone: UTC / GMT +6
+              </span>
+            </div>
           </div>
         </div>
-          
+
+        {/* Quick Social & Connect Bar */}
+        <div className="mt-10 p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-purple-900/20 via-indigo-900/20 to-purple-900/20 backdrop-blur-xl border border-purple-500/20 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="text-center md:text-left">
+            <h4 className="text-xl font-bold text-white">Connect Across Platforms</h4>
+            <p className="text-sm text-gray-300 mt-1">
+              Find my work, explore repositories, or reach out directly on LinkedIn & GitHub.
+            </p>
+          </div>
+
+          <div className="flex flex-wrap items-center justify-center gap-3">
+            <a
+              href="https://www.linkedin.com/in/bibekbhowmick/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#0077B5]/20 hover:bg-[#0077B5]/30 border border-[#0077B5]/40 text-[#D7C4FC] hover:text-white text-sm font-semibold transition-all hover:scale-105 shadow-md"
+            >
+              <FaLinkedinIn className="text-[#0077B5] text-base" />
+              <span>LinkedIn</span>
+              <FaExternalLinkAlt className="text-[10px] opacity-70" />
+            </a>
+
+            <a
+              href="https://github.com/bibek-totol"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white/10 hover:bg-white/15 border border-white/20 text-[#D7C4FC] hover:text-white text-sm font-semibold transition-all hover:scale-105 shadow-md"
+            >
+              <FaGithub className="text-base" />
+              <span>GitHub</span>
+              <FaExternalLinkAlt className="text-[10px] opacity-70" />
+            </a>
+
+            <a
+              href="mailto:bibektotol@gmail.com"
+              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-gradient-to-r from-purple-600 via-indigo-600 to-purple-600 hover:from-purple-500 hover:to-indigo-500 text-white text-sm font-bold shadow-lg shadow-purple-600/30 transition-all hover:scale-105"
+            >
+              <FaPaperPlane className="text-xs" />
+              <span>Write a Message</span>
+            </a>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

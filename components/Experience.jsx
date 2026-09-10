@@ -58,9 +58,9 @@ export default function Experience() {
             year: "2021 – Present",
             title: "Algorithmic Problem Solving",
             company: "CodeChef, Codeforces & LeetCode",
-            badge: "340+ Solved",
+            badge: "500+ Solved",
             points: [
-                "**340+ Problems Solved**: Demonstrating deep analytical thinking, data structure selection, and optimal time-complexity design.",
+                "**500+ Problems Solved**: Demonstrating deep analytical thinking, data structure selection, and optimal time-complexity design.",
                 "**Competitive Contestant**: Official contestant in the 2021 ICPC Asia Dhaka Regional Preliminary Contest."
             ],
             tags: ["C++", "Algorithms", "LeetCode", "Codeforces", "ICPC"],

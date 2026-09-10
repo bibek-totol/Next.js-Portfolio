@@ -52,7 +52,7 @@ export default function Skills() {
             icon: <ShieldCheck />,
             color: "#8B5CF6",
             bgColor: "rgba(139, 92, 246, 0.12)",
-            skills: ['340+ Problems Solved', 'Data Structures', 'Algorithms', 'Codeforces', 'CodeChef', 'LeetCode', 'ICPC Preliminary'],
+            skills: ['500+ Problems Solved', 'Data Structures', 'Algorithms', 'Codeforces', 'CodeChef', 'LeetCode', 'ICPC Preliminary'],
             desc: "Strong computer science foundations, optimal time-complexity design, and independent analytical debugging."
         }
     ];
@@ -63,9 +63,7 @@ export default function Skills() {
                 <h2 className="text-3xl sm:text-4xl lg:text-6xl font-extrabold text-white">
                     Bibek Bhowmick's <span className="bg-gradient-to-r from-[#9463F8] via-[#C084FC] to-[#38BDF8] bg-clip-text text-transparent">Technical Skills</span>
                 </h2>
-                <p className="text-[#C5B4E3] max-w-2xl mx-auto mt-4 text-sm sm:text-base leading-relaxed">
-                    Full Stack Engineer proficient across JavaScript (ES6+), TypeScript, React.js, Next.js, Node.js, PostgreSQL, MongoDB, Redis, Docker, and AI workflow automation.
-                </p>
+               
 
                 <div className="mt-12 sm:mt-16">
                     <VerticalTimeline lineColor="#9463F8">
