@@ -190,53 +190,14 @@ const ContactUs = () => {
 
             <div className="mt-6 pt-5 border-t border-white/10 flex items-center">
               <span className="w-full text-center py-2.5 px-3 rounded-xl bg-pink-500/10 border border-pink-500/20 text-pink-300 text-xs font-semibold">
-                🌐 Timezone: UTC / GMT +6
+                 Timezone: UTC / GMT +6
               </span>
             </div>
           </div>
         </div>
 
         {/* Quick Social & Connect Bar */}
-        <div className="mt-10 p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-purple-900/20 via-indigo-900/20 to-purple-900/20 backdrop-blur-xl border border-purple-500/20 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="text-center md:text-left">
-            <h4 className="text-xl font-bold text-white">Connect Across Platforms</h4>
-            <p className="text-sm text-gray-300 mt-1">
-              Find my work, explore repositories, or reach out directly on LinkedIn & GitHub.
-            </p>
-          </div>
-
-          <div className="flex flex-wrap items-center justify-center gap-3">
-            <a
-              href="https://www.linkedin.com/in/bibekbhowmick/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#0077B5]/20 hover:bg-[#0077B5]/30 border border-[#0077B5]/40 text-[#D7C4FC] hover:text-white text-sm font-semibold transition-all hover:scale-105 shadow-md"
-            >
-              <FaLinkedinIn className="text-[#0077B5] text-base" />
-              <span>LinkedIn</span>
-              <FaExternalLinkAlt className="text-[10px] opacity-70" />
-            </a>
-
-            <a
-              href="https://github.com/bibek-totol"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white/10 hover:bg-white/15 border border-white/20 text-[#D7C4FC] hover:text-white text-sm font-semibold transition-all hover:scale-105 shadow-md"
-            >
-              <FaGithub className="text-base" />
-              <span>GitHub</span>
-              <FaExternalLinkAlt className="text-[10px] opacity-70" />
-            </a>
-
-            <a
-              href="mailto:bibektotol@gmail.com"
-              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-gradient-to-r from-purple-600 via-indigo-600 to-purple-600 hover:from-purple-500 hover:to-indigo-500 text-white text-sm font-bold shadow-lg shadow-purple-600/30 transition-all hover:scale-105"
-            >
-              <FaPaperPlane className="text-xs" />
-              <span>Write a Message</span>
-            </a>
-          </div>
-        </div>
+        
       </div>
     </section>
   );
