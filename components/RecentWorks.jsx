@@ -110,15 +110,25 @@ export default function RecentWorks() {
         },
     ];
 
+    const aiProjects = [
+        {
+            id: 1,
+            img: "/assets/tele-ai-lead-automation/Screenshot_16.jpg",
+            link: "https://youtu.be/_nkOWvK0d3Q?si=igK4QeG5fEnx3NI8",
+            desc: "Telegram AI & Odoo Lead Automation: 100% self-hosted multi-turn AI lead generation assistant powered by Google Gemini 3.1 Flash-Lite, n8n, PostgreSQL, and Odoo CRM with 13 custom fields and zero paid middleware.",
+            to: "/details9",
+        },
+    ];
+
     return (
-        <section className="mt-16 rounded-4xl py-20 px-6 sm:px-10 lg:px-24" aria-label="Web Development Projects by Bibek Bhowmick" id="portfolio-section">
+        <section className="mt-16 rounded-4xl py-20 px-6 sm:px-10 lg:px-24" aria-label="Web Development and AI Automation Projects by Bibek Bhowmick" id="portfolio-section">
             <header className="max-w-7xl mx-auto text-center">
                 <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#B694FA]">
-                    Bibek Bhowmick's Recent <span className="text-[#9463F8]">Web Development Projects</span>
+                    Bibek Bhowmick's Recent <span className="text-[#9463F8]">Featured Projects</span>
                 </h2>
                 <p className="text-[#B694FA] font-medium max-w-2xl mx-auto mt-4 text-sm sm:text-base">
-                    Browse my portfolio of Full Stack web development projects built with React, Next.js, Node.js, and MongoDB.
-                    Each project showcases professional-grade code and modern UI/UX design.
+                    Browse my portfolio of Full Stack web development and AI Automation projects built with Next.js, React, Google Gemini AI, n8n, and Odoo CRM.
+                    Each project showcases production-ready architecture, intelligent automation, and modern UI/UX design.
                 </p>
             </header>
 
@@ -129,6 +139,9 @@ export default function RecentWorks() {
                     </Tab>
                     <Tab className="px-4 py-2 rounded-full cursor-pointer hover:bg-[#9463F8]/20 focus:outline-none focus:bg-[#9463F8]/30">
                         React.js Projects
+                    </Tab>
+                    <Tab className="px-4 py-2 rounded-full cursor-pointer hover:bg-[#9463F8]/20 focus:outline-none focus:bg-[#9463F8]/30">
+                        AI Automation
                     </Tab>
                 </TabList>
 
@@ -145,6 +158,15 @@ export default function RecentWorks() {
                 <TabPanel>
                     <div className="mt-24 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-y-56 gap-x-10">
                         {mernProjects.map((proj) => (
+                            <ProjectCard key={proj.id} {...proj} />
+                        ))}
+                    </div>
+                </TabPanel>
+
+                {/* TabPanel 3: AI Automation Projects */}
+                <TabPanel>
+                    <div className="mt-24 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-y-56 gap-x-10">
+                        {aiProjects.map((proj) => (
                             <ProjectCard key={proj.id} {...proj} />
                         ))}
                     </div>
