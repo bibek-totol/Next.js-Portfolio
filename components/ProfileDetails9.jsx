@@ -181,23 +181,7 @@ const ProfileDetails9 = () => {
                             </div>
                         </div>
 
-                        {/* Architecture Pipeline Visual */}
-                        <div className="mt-8 p-4 pookie3 rounded-xl border border-purple-500/30">
-                            <h3 className="text-lg font-semibold text-purple-300 flex items-center gap-2 mb-3">
-                                <Workflow className="w-5 h-5" />
-                                Real-Time Architecture Pipeline
-                            </h3>
-                            <div className="text-xs sm:text-sm font-mono text-gray-200 bg-black/50 p-3 rounded-lg overflow-x-auto leading-relaxed border border-white/10">
-                                <div>[Telegram User] ──► (Bot API Webhook) ──► [Cloudflare Tunnel]</div>
-                                <div className="text-purple-400">      │</div>
-                                <div className="text-purple-400">      ▼ (POST /webhook/telegram)</div>
-                                <div>[n8n Master Orchestrator (Docker)]</div>
-                                <div className="text-cyan-400">      ├──► [PostgreSQL] (Deduplication, Chat History & Knowledge)</div>
-                                <div className="text-emerald-400">      ├──► [Gemini 3.1 Flash-Lite] (Structured JSON Extraction)</div>
-                                <div className="text-pink-400">      ├──► [Telegram Bot API] (Instant Contextual Reply)</div>
-                                <div className="text-yellow-400">      └──► [Odoo CRM 17 (JSON-RPC)] (13 Custom Fields Sync)</div>
-                            </div>
-                        </div>
+                       
 
                         {/* 13 Custom CRM Fields Summary */}
                         <div className="mt-8">
